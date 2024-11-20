@@ -1,0 +1,395 @@
+{
+  "@openmrs/esm-patient-registration-app": {
+    "sections": [
+      "demographics",
+      "custom",
+      "contact",
+      "patienttype"
+    ],
+    "fieldConfigurations": {
+      "address": {
+        "useAddressHierarchy": {
+          "enabled": true,
+          "searchAddressByLevel": true
+        }
+      },
+      "name": {
+        "displayCapturePhoto": false,
+        "displayMiddleName": true,
+        "allowUnidentifiedPatients": false,
+        "displayReverseFieldOrder": false
+      },
+      "gender": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    "fieldDefinitions": [
+      {
+        "id": "telephoneField",
+        "type": "person attribute",
+        "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+        "placeholder": "820000000000",
+        "showHeading": true
+      },
+      {
+        "id": "telephoneField2",
+        "type": "person attribute",
+        "uuid": "e6c97a9d-a77b-401f-b06e-81900e21ed1d",
+        "placeholder": "820000000",
+        "showHeading": false
+      },
+      {
+        "id": "typeOfPatient",
+        "type": "person attribute",
+        "uuid": "dbc12194-b757-4f8a-8acb-995fbb293dba",
+        "label": "Tipo de Paciente",
+        "answerConceptSetUuid": "49d8c3de-cba7-493e-98fa-5486193902ad",
+        "validation": {
+          "required": false
+        }
+      },
+      {
+        "id": "maritalStatus",
+        "type": "person attribute",
+        "uuid": "8d871f2a-c2cc-11de-8d13-0010c6dffd0f",
+        "label": "Estado civil",
+        "answerConceptSetUuid": "e1d80fbe-1d5f-11e0-b929-000c29ad1d07",
+        "validation": {
+          "required": false
+        }
+      },
+      {
+        "id": "workplace",
+        "type": "person attribute",
+        "uuid": "e2e3fff8-1d5f-11e0-b929-000c29ad1d07",
+        "label": "Local de Trabalho",
+        "validation": {
+          "required": false
+        }
+      },
+      {
+        "id": "levelOfEducation",
+        "type": "person attribute",
+        "uuid": "5f07a41b-66e5-4091-93ca-8dc1c6872d68"
+      }
+    ],
+    "sectionDefinitions": [
+      {
+        "id": "demographics",
+        "name": "Basic Info",
+        "fields": [
+          "name",
+          "gender",
+          "dob",
+          "id"
+        ]
+      },
+      {
+        "id": "contact",
+        "name": "Contact Details",
+        "fields": [
+          "address",
+          "telephoneField",
+          "telephoneField2"
+        ]
+      },
+      {
+        "id": "custom",
+        "name": "Demográficos",
+        "fields": [
+          "maritalStatus",
+          "workplace",
+          "levelOfEducation"
+        ]
+      },
+      {
+        "id": "patienttype",
+        "name": "Tipo de Paciente",
+        "fields": [
+          "typeOfPatient"
+        ]
+      },
+      {
+        "id": "additionalInformation",
+        "name": "Additional Information",
+        "fields": []
+      },
+      {
+        "id": "death",
+        "name": "Death Info",
+        "fields": []
+      },
+      {
+        "id": "relationships",
+        "name": "Relationships",
+        "fields": []
+      }
+    ],
+    "defaultPatientIdentifierTypes": [
+      "e2b966d0-1d5f-11e0-b929-000c29ad1d07",
+      "79ad599a-50df-48f8-865c-0095ec9a9d01",
+      "e2b97b70-1d5f-11e0-b929-000c29ad1d07"
+    ],
+    "Translation overrides": {
+      "en": {
+        "Commune": "Commune",
+        "Village": "Village",
+        "Country": "Country",
+        "Province": "Province",
+        "District": "District",
+        "contactSection": "Contact Details",
+        "demographicsSection": "Basic Info",
+        "additionalInformationSection": "Additional Information",
+        "Male": "Male",
+        "Female": "Female",
+        "Other": "Other",
+        "Unknown": "Unknown",
+        "selectAnOption": "Select an option"
+      }
+    }
+  },
+  "@openmrs/esm-patient-chart-app": {
+    "Translation overrides": {
+      "en": {
+        "patientBreadcrumb": "Patient"
+      }
+    },
+    "logo": {},
+    "Display conditions": {
+      "privileges": [
+        "View Patient Summary"
+      ]
+    },
+    "visitAttributeTypes": [],
+    "extensionSlots": {
+      "patient-chart-summary-dashboard-slot": {
+        "add": [
+          "obs-by-encounter-widget#referral"
+        ],
+        "order": [
+          "obs-by-encounter-widget#referral"
+        ],
+        "configure": {
+          "obs-by-encounter-widget#referral": {
+            "title": "Referral",
+            "showGraphByDefault": true,
+            "encounterTypes": [
+              "b870b6bb-9441-4664-9087-3d3477174213"
+            ],
+            "Display conditions": {
+              "privileges": [
+                "Add Users"
+              ]
+            },
+            "data": [
+              {
+                "label": "Facility",
+                "concept": "758b9dd8-b6d0-4ac2-b245-0e7bffb4693a",
+                "color": "blue"
+              },
+              {
+                "label": "Reason for referral",
+                "concept": "dee2db0c-5a06-4b1e-8be6-0f327fe6158d",
+                "color": "green"
+              }
+            ],
+            "table": {
+              "pageSize": 6
+            }
+          }
+        }
+      }
+    },
+    "disableChangingVisitLocation": true
+  },
+  "@openmrs/esm-patient-biometrics-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Vitals and Biometrics"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-appointments-app": {
+    "Display conditions": {
+      "privileges": [
+        "Manage Appointments"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-immunizations-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Immunizations"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-allergies-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Allergies"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-attachments-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Attachments"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-conditions-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Conditions"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-forms-app": {
+    "Display conditions": {
+      "privileges": [
+        "Get Forms"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-medications-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Orders"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-notes-app": {
+    "Display conditions": {
+      "privileges": [
+        "Get Notes"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-programs-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Patient Programs"
+      ]
+    },
+    "showProgramStatusField": true
+  },
+  "@openmrs/esm-patient-test-results-app": {
+    "Display conditions": {
+      "privileges": [
+        "View Test Results"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-vitals-app": {
+    "Display conditions": {
+      "privileges": [
+        "Add Vitals and Biometrics"
+      ]
+    }
+  },
+  "@openmrs/esm-patient-banner-app": {
+    "Translation overrides": {
+      "en": {
+        "address1": "Commune",
+        "city": "Village",
+        "Country": "Country",
+        "state": "Province",
+        "district": "District"
+      }
+    }
+  },
+  "@openmrs/esm-home-app": {
+    "extensionSlots": {
+      "homepage-dashboard-slot": {
+        "configure": {
+          "patient-lists-dashboard-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Patient Lists"
+              ]
+            }
+          },
+          "service-queues-dashboard-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Service Queues"
+              ]
+            }
+          },
+          "clinical-appointments-dashboard-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Appointments"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "@openmrs/esm-primary-navigation-app": {
+    "logo": {},
+    "extensionSlots": {
+      "app-menu-slot": {
+        "configure": {
+          "appointments-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Appointments"
+              ]
+            }
+          },
+          "form-builder-app-menu-link": {
+            "Display conditions": {
+              "privileges": [
+                "Build Forms"
+              ]
+            }
+          },
+          "dispensing-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Dispensing"
+              ]
+            }
+          },
+          "forms-app-link": {
+            "Display conditions": {
+              "privileges": [
+                "Access Fast Data Entry"
+              ]
+            }
+          },
+          "patient-list-linkq": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Patient Lists"
+              ]
+            }
+          },
+          "cohort-builder-app-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Cohorts"
+              ]
+            }
+          },
+          "outpatient-link": {
+            "Display conditions": {
+              "privileges": [
+                "Access Outpatient App"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

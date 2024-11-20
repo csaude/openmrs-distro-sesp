@@ -1,0 +1,5 @@
+.vscode/
+backend/logs/*
+database/logs/*
+database/scripts/*
+build/backend/settings.xml
