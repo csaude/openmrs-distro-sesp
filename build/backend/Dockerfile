@@ -14,8 +14,12 @@ RUN --mount=type=cache,target=/root/.m2 mvn org.openmrs.maven.plugins:openmrs-sd
 COPY openmrs-distro.properties ./
 
 # Build the distro
-RUN --mount=type=cache,target=/root/.m2 mvn -s settings.xml \
-    org.openmrs.maven.plugins:openmrs-sdk-maven-plugin:build-distro -Ddir=$OMRS_BUILD_RESULT
+RUN --mount=type=cache,target=/root/.m2 \
+    --mount=type=secret,id=GH_USERNAME  \
+    --mount=type=secret,id=GH_PASSWORD \
+    export GH_USERNAME=$(cat /run/secrets/GH_USERNAME) && \
+    export GH_PASSWORD=$(cat /run/secrets/GH_PASSWORD) && \
+    mvn -s settings.xml org.openmrs.maven.plugins:openmrs-sdk-maven-plugin:build-distro -Ddir=$OMRS_BUILD_RESULT
 
 RUN cp $OMRS_BUILD_RESULT/web/openmrs_core/openmrs.war /openmrs/distribution/openmrs_core/
 RUN cp $OMRS_BUILD_RESULT/web/openmrs-distro.properties /openmrs/distribution/

@@ -9,7 +9,7 @@ Images can be built with the following commands:
 ```
 docker build -t hub.csaude.org.mz/sesp/openmrs-distro-sesp-frontend:<version>
 
-docker build -t hub.csaude.org.mz/sesp/openmrs-distro-sesp-backend:<version>
+docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD -t hub.csaude.org.mz/sesp/openmrs-distro-sesp-backend:<version>
 ```
 
 To successfully build the backend image a few packages from the [GitHub maven registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry) need to be downloaded, the registry is configured in `settings.xml`. As of now, to be able to download packages, users need to be [authenticated](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages).
