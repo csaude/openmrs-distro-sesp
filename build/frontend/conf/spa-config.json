@@ -224,6 +224,63 @@
             }
           }
         }
+      },
+      "patient-chart-dashboard-slot": {
+        "configure": {
+          "patient-orders-summary-dashboard": {
+            "Display conditions": {
+              "privileges": [
+                "Get Orders"
+              ]
+            }
+          },
+          "test-results-summary-dashboard": {
+            "Display conditions": {
+              "privileges": [
+                "Get TestOrders"
+              ]
+            }
+          },
+          "ficha-resumo-link": {
+            "Display conditions": {
+              "privileges": [
+                "Get Ficha Resumo"
+              ]
+            }
+          }
+        }
+      },
+      "action-menu-patient-chart-items-slot" :{
+        "configure": {
+          "order-basket-action-menu": {
+            "Display conditions": {
+              "privileges": [
+                "Get Orders"
+              ]
+            }
+          },
+          "clinical-form-action-menu": {
+            "Display conditions": {
+              "privileges": [
+                "Get O3 Forms"
+              ]
+            }
+          },
+          "visit-note-nav-button": {
+            "Display conditions": {
+              "privileges": [
+                "Get Notes"
+              ]
+            }
+          },
+          "patient-lists-action-menu": {
+            "Display conditions": {
+              "privileges": [
+                "Get Patient Cohorts"
+              ]
+            }
+          }
+        }
       }
     },
     "disableChangingVisitLocation": true
@@ -280,7 +337,7 @@
   "@openmrs/esm-patient-medications-app": {
     "Display conditions": {
       "privileges": [
-        "Add Orders"
+        "Get Orders"
       ]
     }
   },
@@ -322,6 +379,19 @@
         "state": "Province",
         "district": "District"
       }
+    },
+    "extensionSlots": {
+      "patient-actions-slot": {
+        "configure": {
+          "add-patient-to-patient-list-button": {
+            "Display conditions": {
+              "privileges": [
+                "Get Patient Cohorts"
+              ]
+            }
+          }
+        }
+      }
     }
   },
   "@openmrs/esm-home-app": {
@@ -338,7 +408,7 @@
           "service-queues-dashboard-link": {
             "Display conditions": {
               "privileges": [
-                "Manage Service Queues"
+                "Manage Queues"
               ]
             }
           },
@@ -346,6 +416,13 @@
             "Display conditions": {
               "privileges": [
                 "Manage Appointments"
+              ]
+            }
+          },
+          "laboratory-dashboard-link": {
+            "Display conditions": {
+              "privileges": [
+                "Get Orders"
               ]
             }
           }
@@ -358,52 +435,24 @@
     "extensionSlots": {
       "app-menu-slot": {
         "configure": {
-          "appointments-link": {
+          "system-administration-app-menu-link": {
             "Display conditions": {
               "privileges": [
-                "Manage Appointments"
-              ]
-            }
-          },
-          "form-builder-app-menu-link": {
-            "Display conditions": {
-              "privileges": [
-                "Build Forms"
+                "View Administration Functions"
               ]
             }
           },
           "dispensing-link": {
             "Display conditions": {
               "privileges": [
-                "Manage Dispensing"
+                "Get Medication Dispense"
               ]
             }
           },
           "forms-app-link": {
             "Display conditions": {
               "privileges": [
-                "Access Fast Data Entry"
-              ]
-            }
-          },
-          "patient-list-linkq": {
-            "Display conditions": {
-              "privileges": [
-                "Manage Patient Lists"
-              ]
-            }
-          },
-          "cohort-builder-app-link": {
-            "Display conditions": {
-              "privileges": [
-                "Manage Cohorts"
-              ]
-            }
-          },
-          "outpatient-link": {
-            "Display conditions": {
-              "privileges": [
-                "Access Outpatient App"
+                "Get O3 Forms"
               ]
             }
           }

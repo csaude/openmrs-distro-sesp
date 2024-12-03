@@ -1,0 +1,3 @@
+Uuid,"Privilege name",Description
+c73c5faf-4f49-4dc7-873c-a5f983fdbe27,"Get Ficha Resumo","Allows user to read ficha resumo of a patient"
+95ab12aa-c990-4feb-b9a9-ef3ceea9f6f0,"Get O3 Forms","Allows user to access the O3 Forms workspace"
