@@ -1,0 +1,56 @@
+services:
+  gateway:
+    image: openmrs/openmrs-reference-application-3-gateway:qa
+    container_name: sesp-gateway
+    restart: "unless-stopped"
+    depends_on:
+      - frontend
+      - backend
+    ports:
+      - "80:80"
+
+  frontend:
+    image: hub.csaude.org.mz/sesp/openmrs-distro-sesp-frontend:latest
+    container_name: sesp-frontend
+    environment:
+      SPA_PATH: /openmrs/spa
+      API_URL: /openmrs
+      SPA_CONFIG_URLS: /openmrs/spa/spa-config.json
+      SPA_DEFAULT_LOCALE: pt
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/" ]
+      timeout: 5s
+    depends_on:
+      - backend
+
+  backend:
+    image: hub.csaude.org.mz/sesp/openmrs-distro-sesp-backend:latest
+    container_name: sesp-backend
+    depends_on:
+      - db
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/openmrs" ]
+      timeout: 5s
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ./backend/logs:/usr/local/tomcat/logs
+
+  db:
+    image: hub.csaude.org.mz/sesp/mysql:8.4.2
+    container_name: sesp-db
+    environment:
+      # -- BOF REMOVE AFTER DATABASE CREATION
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: openmrs_prod
+      MYSQL_USER: sesp
+      MYSQL_PASSWORD: sesp
+      # -- EOF REMOVE AFTER DATABASE CREATION
+      MYSQL_DATA_DIRECTORY: /var/lib/mysql
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ./database/logs:/var/log/mysql
+      - db-data:/var/lib/mysql
+      - ./database/scripts:/scripts
+
+volumes:
+  db-data:

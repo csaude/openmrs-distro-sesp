@@ -1,0 +1,4 @@
+.vscode/
+backend/logs/*
+database/logs/*
+database/scripts/*
