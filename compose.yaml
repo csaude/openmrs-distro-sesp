@@ -12,6 +12,7 @@ services:
   frontend:
     image: hub.csaude.org.mz/sesp/openmrs-distro-sesp-frontend:latest
     container_name: sesp-frontend
+    restart: "unless-stopped"
     environment:
       SPA_PATH: /openmrs/spa
       API_URL: /openmrs
@@ -26,6 +27,7 @@ services:
   backend:
     image: hub.csaude.org.mz/sesp/openmrs-distro-sesp-backend:latest
     container_name: sesp-backend
+    restart: "unless-stopped"
     depends_on:
       - db
     healthcheck:
@@ -38,6 +40,7 @@ services:
   db:
     image: hub.csaude.org.mz/sesp/mysql:8.4.2
     container_name: sesp-db
+    restart: "unless-stopped"
     environment:
       # -- BOF REMOVE AFTER DATABASE CREATION
       MYSQL_ROOT_PASSWORD: root
