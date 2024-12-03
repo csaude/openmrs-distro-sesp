@@ -244,7 +244,7 @@
           "ficha-resumo-link": {
             "Display conditions": {
               "privileges": [
-                "Get Ficha Resumo"
+                "Manage Ficha Resumo"
               ]
             }
           }
@@ -288,7 +288,7 @@
   "@openmrs/esm-patient-biometrics-app": {
     "Display conditions": {
       "privileges": [
-        "Add Vitals and Biometrics"
+        "Manage Vitals and Biometrics"
       ]
     }
   },
@@ -366,7 +366,7 @@
   "@openmrs/esm-patient-vitals-app": {
     "Display conditions": {
       "privileges": [
-        "Add Vitals and Biometrics"
+        "Manage Vitals and Biometrics"
       ]
     }
   },
