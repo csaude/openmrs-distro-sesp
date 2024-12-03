@@ -34,7 +34,7 @@
       {
         "id": "telephoneField",
         "type": "person attribute",
-        "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+        "uuid": "e2e3fd64-1d5f-11e0-b929-000c29ad1d07",
         "placeholder": "820000000000",
         "showHeading": true
       },
@@ -77,7 +77,24 @@
       {
         "id": "levelOfEducation",
         "type": "person attribute",
-        "uuid": "5f07a41b-66e5-4091-93ca-8dc1c6872d68"
+        "uuid": "5f07a41b-66e5-4091-93ca-8dc1c6872d68",
+        "answerConceptSetUuid": "e1db0700-1d5f-11e0-b929-000c29ad1d07"
+      },
+      {
+        "id": "fathersName",
+        "type": "person attribute",
+        "uuid": "0f196810-9314-42f0-a882-47097043f4e9"
+      },
+      {
+        "id": "mothersName",
+        "type": "person attribute",
+        "uuid": "8d871d18-c2cc-11de-8d13-0010c6dffd0f"
+      },
+      {
+        "id": "occupation",
+        "type": "person attribute",
+        "uuid": "36cad9d4-7f04-41cc-ac6a-d31403b2725f",
+        "answerConceptSetUuid": "e1df7128-1d5f-11e0-b929-000c29ad1d07"
       }
     ],
     "sectionDefinitions": [
@@ -104,9 +121,12 @@
         "id": "custom",
         "name": "Demográficos",
         "fields": [
+          "fathersName",
+          "mothersName",
           "maritalStatus",
-          "workplace",
-          "levelOfEducation"
+          "levelOfEducation",
+          "occupation",
+          "workplace"
         ]
       },
       {
@@ -133,9 +153,8 @@
       }
     ],
     "defaultPatientIdentifierTypes": [
-      "e2b966d0-1d5f-11e0-b929-000c29ad1d07",
-      "79ad599a-50df-48f8-865c-0095ec9a9d01",
-      "e2b97b70-1d5f-11e0-b929-000c29ad1d07"
+      "e2b9682e-1d5f-11e0-b929-000c29ad1d07",
+      "e2b966d0-1d5f-11e0-b929-000c29ad1d07"
     ],
     "Translation overrides": {
       "en": {
