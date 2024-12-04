@@ -1,0 +1,2 @@
+Uuid,"Role name",Description,"Inherited roles",Privileges
+e2f0acbc-1d5f-11e0-b929-000c29ad1d07,Clinician,"Users who are a part of direct patient care.",,Get Users; Edit Users; Get Providers; Get Visits; Get Concepts; Get Patients; Get People; View Appointments; Manage Vitals and Biometrics; Get Notes; Get Orders; Get Encounters; Edit Encounters; Add Encounters; Get Encounter Roles; Edit Diagnoses; Get Forms; Get Observations; Edit Observations; Add Observations; Get Queue Entries; Get Care Settings

@@ -183,7 +183,8 @@
     "logo": {},
     "Display conditions": {
       "privileges": [
-        "View Patient Summary"
+        "Get Visits",
+        "Get Encounters"
       ]
     },
     "visitAttributeTypes": [],
@@ -221,6 +222,71 @@
             ],
             "table": {
               "pageSize": 6
+            }
+          }
+        }
+      },
+      "patient-chart-dashboard-slot": {
+        "configure": {
+          "encounters-summary-dashboard": {
+            "Display conditions": {
+              "privileges": [
+                "Get Visits",
+                "Get Encounters"
+              ]
+            }
+          },
+          "patient-orders-summary-dashboard": {
+            "Display conditions": {
+              "privileges": [
+                "Get Orders"
+              ]
+            }
+          },
+          "test-results-summary-dashboard": {
+            "Display conditions": {
+              "privileges": [
+                "Get TestOrders"
+              ]
+            }
+          },
+          "ficha-resumo-link": {
+            "Display conditions": {
+              "privileges": [
+                "Manage Ficha Resumo"
+              ]
+            }
+          }
+        }
+      },
+      "action-menu-patient-chart-items-slot" :{
+        "configure": {
+          "order-basket-action-menu": {
+            "Display conditions": {
+              "privileges": [
+                "Get Orders"
+              ]
+            }
+          },
+          "clinical-form-action-menu": {
+            "Display conditions": {
+              "privileges": [
+                "Get O3 Forms"
+              ]
+            }
+          },
+          "visit-note-nav-button": {
+            "Display conditions": {
+              "privileges": [
+                "Get Notes"
+              ]
+            }
+          },
+          "patient-lists-action-menu": {
+            "Display conditions": {
+              "privileges": [
+                "Get Patient Cohorts"
+              ]
             }
           }
         }
@@ -280,7 +346,7 @@
   "@openmrs/esm-patient-medications-app": {
     "Display conditions": {
       "privileges": [
-        "Add Orders"
+        "Get Care Settings"
       ]
     }
   },
@@ -356,8 +422,26 @@
   "@openmrs/esm-primary-navigation-app": {
     "logo": {},
     "extensionSlots": {
+      "top-nav-actions-slot": {
+        "configure": {
+          "add-patient-action": {
+            "Display conditions": {
+              "privileges": [
+                "Add Patients"
+              ]
+            }
+          }
+        }
+      },
       "app-menu-slot": {
         "configure": {
+          "system-administration-app-menu-link": {
+            "Display conditions": {
+              "privileges": [
+                "View Administration Functions"
+              ]
+            }
+          },
           "appointments-link": {
             "Display conditions": {
               "privileges": [
