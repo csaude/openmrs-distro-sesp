@@ -1,0 +1,4 @@
+Uuid,"Privilege name",Description
+c73c5faf-4f49-4dc7-873c-a5f983fdbe27,"Manage Ficha Resumo","Able to add/edit/delete ficha resumo of a patient"
+95ab12aa-c990-4feb-b9a9-ef3ceea9f6f0,"Get O3 Forms","Able to access the O3 Forms workspace"
+dc671871-e83a-4f95-9d4a-afc6e79ab0f1,"Manage Vitals and Biometrics","Able to add/edit/delete vitals and biometrics"
