@@ -297,7 +297,7 @@
   "@openmrs/esm-patient-biometrics-app": {
     "Display conditions": {
       "privileges": [
-        "Add Vitals and Biometrics"
+        "Manage Vitals and Biometrics"
       ]
     }
   },
@@ -375,7 +375,7 @@
   "@openmrs/esm-patient-vitals-app": {
     "Display conditions": {
       "privileges": [
-        "Add Vitals and Biometrics"
+        "Manage Vitals and Biometrics"
       ]
     }
   },
@@ -387,6 +387,19 @@
         "Country": "Country",
         "state": "Province",
         "district": "District"
+      }
+    },
+    "extensionSlots": {
+      "patient-actions-slot": {
+        "configure": {
+          "add-patient-to-patient-list-button": {
+            "Display conditions": {
+              "privileges": [
+                "Get Patient Cohorts"
+              ]
+            }
+          }
+        }
       }
     }
   },
@@ -404,7 +417,7 @@
           "service-queues-dashboard-link": {
             "Display conditions": {
               "privileges": [
-                "Manage Service Queues"
+                "Manage Queues"
               ]
             }
           },
@@ -412,6 +425,13 @@
             "Display conditions": {
               "privileges": [
                 "Manage Appointments"
+              ]
+            }
+          },
+          "laboratory-dashboard-link": {
+            "Display conditions": {
+              "privileges": [
+                "Get Orders"
               ]
             }
           }
@@ -445,49 +465,21 @@
           "appointments-link": {
             "Display conditions": {
               "privileges": [
-                "Manage Appointments"
-              ]
-            }
-          },
-          "form-builder-app-menu-link": {
-            "Display conditions": {
-              "privileges": [
-                "Build Forms"
+                "View Administration Functions"
               ]
             }
           },
           "dispensing-link": {
             "Display conditions": {
               "privileges": [
-                "Manage Dispensing"
+                "Get Medication Dispense"
               ]
             }
           },
           "forms-app-link": {
             "Display conditions": {
               "privileges": [
-                "Access Fast Data Entry"
-              ]
-            }
-          },
-          "patient-list-linkq": {
-            "Display conditions": {
-              "privileges": [
-                "Manage Patient Lists"
-              ]
-            }
-          },
-          "cohort-builder-app-link": {
-            "Display conditions": {
-              "privileges": [
-                "Manage Cohorts"
-              ]
-            }
-          },
-          "outpatient-link": {
-            "Display conditions": {
-              "privileges": [
-                "Access Outpatient App"
+                "Get O3 Forms"
               ]
             }
           }
