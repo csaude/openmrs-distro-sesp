@@ -51,6 +51,7 @@ services:
       MYSQL_DATA_DIRECTORY: /var/lib/mysql
     volumes:
       - /etc/localtime:/etc/localtime
+      - ./database/conf/mysql.cnf:/etc/mysql/mysql.conf
       - ./database/logs:/var/log/mysql
       - db-data:/var/lib/mysql
       - ./database/scripts:/scripts
