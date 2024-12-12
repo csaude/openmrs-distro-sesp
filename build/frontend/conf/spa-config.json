@@ -1,4 +1,10 @@
 {
+  "@openmrs/esm-login-app": {
+    "logo": {
+      "src": "${openmrsSpaBase}/logo.png",
+      "alt": "Logo"
+    }
+  },
   "@openmrs/esm-patient-registration-app": {
     "sections": [
       "demographics",
@@ -180,7 +186,10 @@
         "patientBreadcrumb": "Patient"
       }
     },
-    "logo": {},
+    "logo": {
+      "src": "${openmrsSpaBase}/logo.png",
+      "alt": "Logo"
+    },
     "Display conditions": {
       "privileges": [
         "Get Visits",
@@ -440,7 +449,10 @@
     }
   },
   "@openmrs/esm-primary-navigation-app": {
-    "logo": {},
+    "logo": {
+      "src": "${openmrsSpaBase}/logo.png",
+      "alt": "Logo"
+    },
     "extensionSlots": {
       "top-nav-actions-slot": {
         "configure": {
