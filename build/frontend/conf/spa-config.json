@@ -243,13 +243,6 @@
               ]
             }
           },
-          "test-results-summary-dashboard": {
-            "Display conditions": {
-              "privileges": [
-                "Get TestOrders"
-              ]
-            }
-          },
           "ficha-resumo-link": {
             "Display conditions": {
               "privileges": [
@@ -311,14 +304,17 @@
   "@openmrs/esm-patient-immunizations-app": {
     "Display conditions": {
       "privileges": [
-        "Add Immunizations"
+        "Manage Immunizations"
       ]
     }
   },
   "@openmrs/esm-patient-allergies-app": {
     "Display conditions": {
       "privileges": [
-        "Add Allergies"
+        "Get Allergies",
+        "Add Allergies",
+        "Edit Allergies",
+        "Remove Allergies"
       ]
     }
   },
@@ -332,7 +328,10 @@
   "@openmrs/esm-patient-conditions-app": {
     "Display conditions": {
       "privileges": [
-        "Add Conditions"
+        "Add Conditions",
+        "Edit Conditions",
+        "Get Conditions",
+        "Delete Conditions"
       ]
     }
   },
@@ -368,7 +367,10 @@
   "@openmrs/esm-patient-test-results-app": {
     "Display conditions": {
       "privileges": [
-        "View Test Results"
+        "Get Orders",
+        "Add Orders",
+        "Edit Orders",
+        "Delete Orders"
       ]
     }
   },
@@ -431,7 +433,10 @@
           "laboratory-dashboard-link": {
             "Display conditions": {
               "privileges": [
-                "Get Orders"
+                "Get Orders",
+                "Add Orders",
+                "Edit Orders",
+                "Delete Orders"
               ]
             }
           }
