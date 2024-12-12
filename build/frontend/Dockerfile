@@ -1,8 +1,7 @@
-# syntax=docker/dockerfile:1.3
 #--------------------------------------------
 # Dev Stage - Assembles and Builds Frontend
 #--------------------------------------------
-FROM --platform=$BUILDPLATFORM node:18-alpine as dev
+FROM --platform=$BUILDPLATFORM node:18-alpine AS dev
 
 ARG APP_SHELL_VERSION=next
 
