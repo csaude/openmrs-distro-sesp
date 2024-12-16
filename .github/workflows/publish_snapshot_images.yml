@@ -31,5 +31,6 @@ jobs:
           echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
       - name: Docker build tag and push disa-weekly-report
         run: |
+          cd build/backend
           docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
           docker push ${{ secrets.REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
