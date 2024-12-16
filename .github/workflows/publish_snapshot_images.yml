@@ -6,7 +6,7 @@ on:
       - dev
 
 env:
-  IMAGE_NAME: /sesp/openmrs-distro-sesp-backend
+  IMAGE_NAME: sesp/openmrs-distro-sesp-backend
   GH_USERNAME:
   GH_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
