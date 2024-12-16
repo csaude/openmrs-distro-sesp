@@ -33,5 +33,4 @@ jobs:
         run: |
           cd build/backend
           docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
-          docker images
-          docker push ${{ secrets.REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:1.0.0-SNAPSHOT
+          docker push ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
