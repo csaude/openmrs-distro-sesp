@@ -1,0 +1,34 @@
+name: Publish SNAPSHOT image
+
+on:
+  push:
+    branches:
+      - dev
+
+env:
+  IMAGE_NAME: /sesp/openmrs-distro-sesp-backend
+  GH_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build_push_backend:
+    name: Build and push backend SNAPSHOT image to C-Saúde Hub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Set VERSION environment variable
+        run: |
+          echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
+      - name: Docker build tag and push disa-weekly-report
+        run: |
+          docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+          docker push ${{ secrets.REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
