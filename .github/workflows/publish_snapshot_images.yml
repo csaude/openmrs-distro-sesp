@@ -7,7 +7,7 @@ on:
 
 env:
   IMAGE_NAME: sesp/openmrs-distro-sesp-backend
-  GH_USERNAME:
+  GH_USERNAME: username
   GH_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
       - name: Set VERSION environment variable
         run: |
           echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
-      - name: Docker build tag and push disa-weekly-report
+      - name: Docker build tag and push openmrs-distro-sesp-backend
         run: |
           cd build/backend
           docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
