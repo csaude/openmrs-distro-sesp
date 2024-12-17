@@ -379,6 +379,9 @@
       "privileges": [
         "Manage Vitals and Biometrics"
       ]
+    },
+    "concepts": {
+      "vitalSignsConceptSetUuid": "e1d85a14-1d5f-11e0-b929-000c29ad1d07"
     }
   },
   "@openmrs/esm-patient-banner-app": {
