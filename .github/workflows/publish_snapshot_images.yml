@@ -8,8 +8,6 @@ on:
 env:
   BACKEND_IMAGE_NAME: sesp/openmrs-distro-sesp-backend
   FRONTEND_IMAGE_NAME: sesp/openmrs-distro-sesp-frontend
-  GH_USERNAME: username
-  GH_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build_push_backend:
@@ -39,7 +37,9 @@ jobs:
         with:
           push: true
           context: build/backend
-          secrets: id=GH_USERNAME,id=GH_PASSWORD
+          secrets: |
+            GH_USERNAME=username
+            GH_PASSWORD=${{ secrets.GITHUB_TOKEN }}
           tags: ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
 
   build_push_frontend:
