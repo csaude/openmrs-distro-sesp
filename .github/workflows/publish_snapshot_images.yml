@@ -31,13 +31,16 @@ jobs:
         run: |
           echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
 
-      - name: Docker build tag and push openmrs-distro-sesp-backend
-        run: |
-          cd build/backend
-          docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }} \
-            -t ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
-          docker push ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }}
-          docker push ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push backend
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: build/backend
+          secrets: id=GH_USERNAME,id=GH_PASSWORD
+          tags: ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
 
   build_push_frontend:
     name: Build and push frontend SNAPSHOT image to C-Saúde Hub
@@ -58,10 +61,12 @@ jobs:
         run: |
           echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
 
-      - name: Docker build tag and push openmrs-distro-sesp-frontend
-        run: |
-          cd build/frontend
-          docker build . -t ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }} \
-            -t ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
-          docker push ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }}
-          docker push ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push frontend
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: build/frontend
+          tags: ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
