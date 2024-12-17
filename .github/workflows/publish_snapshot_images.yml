@@ -41,6 +41,8 @@ jobs:
             GH_USERNAME=username
             GH_PASSWORD=${{ secrets.GITHUB_TOKEN }}
           tags: ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
+          cache-from: type=registry,ref=${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:cache
+          cache-to: type=registry,ref=${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:cache,image-manifest=true
 
   build_push_frontend:
     name: Build and push frontend SNAPSHOT image to C-Saúde Hub
@@ -70,3 +72,5 @@ jobs:
           push: true
           context: build/frontend
           tags: ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
+          cache-from: type=registry,ref=${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:cache
+          cache-to: type=registry,ref=${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:cache,image-manifest=true
