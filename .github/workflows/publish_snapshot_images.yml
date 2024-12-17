@@ -6,7 +6,8 @@ on:
       - dev
 
 env:
-  IMAGE_NAME: sesp/openmrs-distro-sesp-backend
+  BACKEND_IMAGE_NAME: sesp/openmrs-distro-sesp-backend
+  FRONTEND_IMAGE_NAME: sesp/openmrs-distro-sesp-frontend
   GH_USERNAME: username
   GH_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
@@ -19,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Log in to the Container registry
+      - name: Log in to the container registry
         uses: docker/login-action@v3
         with:
           registry: ${{ secrets.REGISTRY }}
@@ -29,8 +30,36 @@ jobs:
       - name: Set VERSION environment variable
         run: |
           echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
+
       - name: Docker build tag and push openmrs-distro-sesp-backend
         run: |
           cd build/backend
-          docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
-          docker push ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+          docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }} \
+            -t ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
+          docker push ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }}
+
+  build_push_frontend:
+    name: Build and push frontend SNAPSHOT image to C-Saúde Hub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Set VERSION environment variable
+        run: |
+          echo "VERSION=$(grep version build/backend/openmrs-distro.properties | cut -d'=' -f2)" >> $GITHUB_ENV
+
+      - name: Docker build tag and push openmrs-distro-sesp-frontend
+        run: |
+          cd build/frontend
+          docker build . -t ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }} \
+            -t ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
+          docker push ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }}
