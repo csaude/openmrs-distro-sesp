@@ -37,6 +37,7 @@ jobs:
           docker build --secret id=GH_USERNAME --secret id=GH_PASSWORD . -t ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }} \
             -t ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
           docker push ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }}
+          docker push ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
 
   build_push_frontend:
     name: Build and push frontend SNAPSHOT image to C-Saúde Hub
@@ -63,3 +64,4 @@ jobs:
           docker build . -t ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }} \
             -t ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
           docker push ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }}
+          docker push ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
