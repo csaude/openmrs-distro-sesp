@@ -191,37 +191,88 @@
     "extensionSlots": {
       "patient-chart-summary-dashboard-slot": {
         "add": [
-          "obs-by-encounter-widget#referral"
+          "obs-by-encounter-widget#viralLoad",
+          "obs-by-encounter-widget#cd4",
+          "obs-by-encounter-widget#genexpert",
+          "obs-by-encounter-widget#tbLam",
+          "obs-by-encounter-widget#tbLamPositivityLevel"
         ],
         "order": [
-          "obs-by-encounter-widget#referral"
+          "obs-by-encounter-widget#viralLoad",
+          "obs-by-encounter-widget#cd4",
+          "obs-by-encounter-widget#genexpert",
+          "obs-by-encounter-widget#tbLam",
+          "obs-by-encounter-widget#tbLamPositivityLevel"
         ],
         "configure": {
-          "obs-by-encounter-widget#referral": {
-            "title": "Referral",
-            "showGraphByDefault": true,
-            "encounterTypes": [
-              "b870b6bb-9441-4664-9087-3d3477174213"
-            ],
-            "Display conditions": {
-              "privileges": [
-                "Add Users"
-              ]
-            },
+          "obs-by-encounter-widget#viralLoad": {
+            "title": "Viral Load",
             "data": [
               {
-                "label": "Facility",
-                "concept": "758b9dd8-b6d0-4ac2-b245-0e7bffb4693a",
+                "label": "Viral Load, Qualitative",
+                "concept": "e1da2704-1d5f-11e0-b929-000c29ad1d07",
                 "color": "blue"
               },
               {
-                "label": "Reason for referral",
-                "concept": "dee2db0c-5a06-4b1e-8be6-0f327fe6158d",
+                "label": "Viral Load",
+                "concept": "e1d6247e-1d5f-11e0-b929-000c29ad1d07",
                 "color": "green"
               }
             ],
             "table": {
-              "pageSize": 6
+              "pageSize": 5
+            }
+          },
+          "obs-by-encounter-widget#cd4": {
+            "title": "CD4 Absolute",
+            "data": [
+              {
+                "label": "CD4 Absolute",
+                "concept": "e1dd5ab4-1d5f-11e0-b929-000c29ad1d07",
+                "color": "blue"
+              }
+            ],
+            "table": {
+              "pageSize": 5
+            }
+          },
+          "obs-by-encounter-widget#genexpert": {
+            "title": "Genexpert",
+            "data": [
+              {
+                "label": "Genexpert",
+                "concept": "b08eb89b-c609-4d15-ab81-53ad7c745332",
+                "color": "blue"
+              }
+            ],
+            "table": {
+              "pageSize": 5
+            }
+          },
+          "obs-by-encounter-widget#tbLam": {
+            "title": "TB LAM",
+            "data": [
+              {
+                "label": "TB LAM",
+                "concept": "ef139cb2-97c1-4c0f-9189-5e0711a45b8f",
+                "color": "blue"
+              }
+            ],
+            "table": {
+              "pageSize": 5
+            }
+          },
+          "obs-by-encounter-widget#tbLamPositivityLevel": {
+            "title": "TB LAM - Level of Positivity",
+            "data": [
+              {
+                "label": "TB LAM - Level of Positivity",
+                "concept": "5d11cf23-9c8b-4ee7-a2d4-b81993123d0d",
+                "color": "blue"
+              }
+            ],
+            "table": {
+              "pageSize": 5
             }
           }
         }
