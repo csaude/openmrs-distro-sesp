@@ -194,29 +194,28 @@
           "obs-by-encounter-widget#viralLoad",
           "obs-by-encounter-widget#cd4",
           "obs-by-encounter-widget#genexpert",
-          "obs-by-encounter-widget#tbLam",
-          "obs-by-encounter-widget#tbLamPositivityLevel"
+          "obs-by-encounter-widget#tbLam"
         ],
         "order": [
           "obs-by-encounter-widget#viralLoad",
           "obs-by-encounter-widget#cd4",
           "obs-by-encounter-widget#genexpert",
-          "obs-by-encounter-widget#tbLam",
-          "obs-by-encounter-widget#tbLamPositivityLevel"
+          "obs-by-encounter-widget#tbLam"
         ],
         "configure": {
           "obs-by-encounter-widget#viralLoad": {
             "title": "Viral Load",
+            "showGraphByDefault": true,
             "data": [
-              {
-                "label": "Viral Load, Qualitative",
-                "concept": "e1da2704-1d5f-11e0-b929-000c29ad1d07",
-                "color": "blue"
-              },
               {
                 "label": "Viral Load",
                 "concept": "e1d6247e-1d5f-11e0-b929-000c29ad1d07",
                 "color": "green"
+              },
+              {
+                "label": "Viral Load, Qualitative",
+                "concept": "e1da2704-1d5f-11e0-b929-000c29ad1d07",
+                "color": "blue"
               }
             ],
             "table": {
@@ -225,6 +224,7 @@
           },
           "obs-by-encounter-widget#cd4": {
             "title": "CD4 Absolute",
+            "showGraphByDefault": true,
             "data": [
               {
                 "label": "CD4 Absolute",
@@ -256,15 +256,7 @@
                 "label": "TB LAM",
                 "concept": "ef139cb2-97c1-4c0f-9189-5e0711a45b8f",
                 "color": "blue"
-              }
-            ],
-            "table": {
-              "pageSize": 5
-            }
-          },
-          "obs-by-encounter-widget#tbLamPositivityLevel": {
-            "title": "TB LAM - Level of Positivity",
-            "data": [
+              },
               {
                 "label": "TB LAM - Level of Positivity",
                 "concept": "5d11cf23-9c8b-4ee7-a2d4-b81993123d0d",
