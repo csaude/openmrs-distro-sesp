@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       cache_bust:
-        description: "Disable esm build cache by setting this to true"
+        description: "Disable esm build cache"
         required: false
         type: boolean
   push:
