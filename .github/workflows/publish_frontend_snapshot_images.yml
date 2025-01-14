@@ -1,4 +1,4 @@
-name: Publish SNAPSHOT image
+name: Publish frontend SNAPSHOT image
 
 on:
   workflow_dispatch:
