@@ -2,6 +2,11 @@ name: Publish frontend SNAPSHOT image
 
 on:
   workflow_dispatch:
+    inputs:
+      cache_bust:
+        description: "Disable esm build cache by setting this to true"
+        required: false
+        type: boolean
   push:
     branches:
       - dev
@@ -37,6 +42,8 @@ jobs:
       - name: Build and push frontend
         uses: docker/build-push-action@v6
         with:
+          build-args: |
+            CACHE_BUST=${{ inputs.cache_bust || false}}
           push: true
           context: build/frontend
           tags: ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
