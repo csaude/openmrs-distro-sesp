@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           build-args: |
-            CACHE_BUST=${{ inputs.cache_bust || false}}
+            CACHE_BUST=${{ inputs.cache_bust && github.run_id	|| false}}
           push: true
           context: build/frontend
           tags: ${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
