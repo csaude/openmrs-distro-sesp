@@ -397,6 +397,19 @@
       "privileges": [
         "Get Notes"
       ]
+    },
+    "Translation overrides": {
+      "pt": {
+        "emptyDiagnosisText": "Nenhum sintoma/diagnóstico selecionado — Insira abaixo um sintoma/diagnóstico",
+        "primaryDiagnosis": "Sintoma/Diagnóstico primário",
+        "searchForPrimaryDiagnosis": "Procure um sintoma/diagnóstico primário",
+        "primaryDiagnosisInputPlaceholder": "Procure aqui",
+        "secondaryDiagnosis": "Sintoma/Diagnóstico secundário",
+        "searchForSecondaryDiagnosis": "Procure um sintoma/diagnóstico secundário",
+        "secondaryDiagnosisInputPlaceholder": "Procure aqui",
+        "note": "Anotaçoes",
+        "image": "Carregar Imagem"
+      }
     }
   },
   "@openmrs/esm-patient-programs-app": {
