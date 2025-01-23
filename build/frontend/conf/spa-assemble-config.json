@@ -14,7 +14,7 @@
     "@openmrs/esm-active-visits-app": "next",
     "@openmrs/esm-primary-navigation-app": "next",
     "@openmrs/esm-patient-forms-app": "next",
-    "@openmrs/esm-patient-programs-app": "next",
+    "@csaude/esm-patient-programs-app": "next",
     "@openmrs/esm-patient-allergies-app": "next",
     "@openmrs/esm-login-app": "next",
     "@openmrs/esm-dispensing-app": "next",
