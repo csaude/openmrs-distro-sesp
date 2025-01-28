@@ -48,14 +48,13 @@ services:
       MYSQL_USER: sesp
       MYSQL_PASSWORD: sesp
       # -- EOF REMOVE AFTER DATABASE CREATION
-      MYSQL_DATA_DIRECTORY: /var/lib/mysql
+      MYSQL_DATA_DIRECTORY: /var/lib/mysql/data
       MYSQL_LOG_DIRECTORY: /var/lib/mysql/log
     volumes:
       - /etc/localtime:/etc/localtime
-      - ./database/conf/mysql.cnf:/etc/mysql/mysql.conf
-      - ./database/logs:/var/log/mysql
-      - db-data:/var/lib/mysql
+      - ./database/conf:/etc/mysql
       - ./database/scripts:/scripts
+      - db-data:/var/lib/mysql
 
 volumes:
   db-data:
