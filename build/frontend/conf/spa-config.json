@@ -188,23 +188,14 @@
     },
     "visitAttributeTypes": [],
     "extensionSlots": {
-      "patient-chart-summary-dashboard-slot": {
+      "patient-chart-viral-load-dashboard-slot": {
         "add": [
-          "obs-by-encounter-widget#viralLoad",
-          "obs-by-encounter-widget#cd4",
-          "obs-by-encounter-widget#genexpert",
-          "obs-by-encounter-widget#tbLam"
-        ],
-        "order": [
-          "obs-by-encounter-widget#viralLoad",
-          "obs-by-encounter-widget#cd4",
-          "obs-by-encounter-widget#genexpert",
-          "obs-by-encounter-widget#tbLam"
+          "obs-by-encounter-widget#viralLoad"
         ],
         "configure": {
           "obs-by-encounter-widget#viralLoad": {
             "title": "Viral Load",
-            "showGraphByDefault": true,
+            "graphOldestFirst": true,
             "data": [
               {
                 "label": "Viral Load",
@@ -220,10 +211,16 @@
             "table": {
               "pageSize": 5
             }
-          },
+          }
+        }
+      },
+      "patient-chart-cd4-absolute-dashboard-slot": {
+        "add": [
+          "obs-by-encounter-widget#cd4"
+        ],
+        "configure": {
           "obs-by-encounter-widget#cd4": {
             "title": "CD4 Absolute",
-            "showGraphByDefault": true,
             "data": [
               {
                 "label": "CD4 Absolute",
@@ -234,7 +231,14 @@
             "table": {
               "pageSize": 5
             }
-          },
+          }
+        }
+      },
+      "patient-chart-genexpert-dashboard-slot": {
+        "add": [
+          "obs-by-encounter-widget#genexpert"
+        ],
+        "configure": {
           "obs-by-encounter-widget#genexpert": {
             "title": "Genexpert",
             "data": [
@@ -247,7 +251,14 @@
             "table": {
               "pageSize": 5
             }
-          },
+          }
+        }
+      },
+      "patient-chart-tb-lam-dashboard-slot": {
+        "add": [
+          "obs-by-encounter-widget#tbLam"
+        ],
+        "configure": {
           "obs-by-encounter-widget#tbLam": {
             "title": "TB LAM",
             "data": [
