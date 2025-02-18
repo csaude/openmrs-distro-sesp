@@ -6,7 +6,7 @@
     "@openmrs/esm-cohort-builder-app": "next",
     "@csaude/esm-ficha-resumo": "next",
     "@csaude/esm-consultation-workflow": "next",
-    "@csaude/esm-patient-lab-results": "next",
+    "@csaude/esm-patient-lab-results-app": "next",
     "@openmrs/esm-patient-flags-app": "next",
     "@openmrs/esm-patient-lists-app": "next",
     "@openmrs/esm-patient-search-app": "next",
