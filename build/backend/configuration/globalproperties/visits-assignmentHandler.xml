@@ -1,0 +1,9 @@
+<config>
+    <globalProperties>
+        <globalProperty>
+            <property>visits.assignmentHandler</property>
+            <value>org.openmrs.api.handler.ExistingOrNewVisitAssignmentHandler</value>
+        </globalProperty>
+    </globalProperties>
+</config>
+  
