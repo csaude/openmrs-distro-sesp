@@ -1,2 +1,3 @@
 Uuid,Void/Retire,Name,Description,Required,Format,Format description,Validator,"Location behavior","Uniqueness behavior"
 7e0d2cd6-afba-4a81-886e-82d0c397f037,false,NUIT,"Número Unico de Identificacao Tributaria",false,\\d{9},Nove dígitos,,,,
+05a29f94-c0ed-11e2-94be-8c13b969e334,,OpenMRS ID,"OpenMRS patient identifier, with check-digit",TRUE,,,org.openmrs.module.idgen.validator.LuhnMod30IdentifierValidator,NOT_USED,UNIQUE
