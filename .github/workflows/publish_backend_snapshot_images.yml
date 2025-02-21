@@ -1,6 +1,12 @@
 name: Publish backend SNAPSHOT image
 
 on:
+  workflow_dispatch:
+    inputs:
+      cache_bust:
+        description: "Disable build cache"
+        required: false
+        type: boolean
   push:
     branches:
       - dev
@@ -44,3 +50,4 @@ jobs:
           tags: ${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.VERSION }},${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:latest
           cache-from: type=registry,ref=${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:cache
           cache-to: type=registry,ref=${{ secrets.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:cache,image-manifest=true
+          no-cache: ${{ inputs.cache_bust || false}}
