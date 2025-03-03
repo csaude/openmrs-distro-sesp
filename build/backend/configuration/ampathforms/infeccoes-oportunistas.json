@@ -1,0 +1,219 @@
+{
+    "name": "Infecções oportunistas",
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "description": "Infecções oportunistas",
+    "version": "1",
+    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "published": true,
+    "retired": false,
+    "pages": [
+      {
+        "label": "Infecções oportunistas",
+        "sections": [
+          {
+            "label": "Infecções oportunistas",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "checkbox",
+                  "concept": "e1dae234-1d5f-11e0-b929-000c29ad1d07",
+                  "answers": [
+                    {
+                      "concept": "e1cda114-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ANAEMIA"
+                    },
+                    {
+                      "concept": "e1cff5d6-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "BRONCOPNEUMONIA"
+                    },
+                    {
+                      "concept": "5340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "CANDIDÍASE ESOFÁGICA"
+                    },
+                    {
+                      "concept": "e1e5232a-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "CANDIDIASE ORAL"
+                    },
+                    {
+                      "concept": "651a08f1-789e-4a68-89a8-61c8114ba289",
+                      "label": "Criptococcemia"
+                    },
+                    {
+                      "concept": "e1cf4e24-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "DERMATITE GENERALIZADA"
+                    },
+                    {
+                      "concept": "c3e82fe4-9086-11e6-a98e-000c29db4475",
+                      "label": "Diabetes mellitus neonatal"
+                    },
+                    {
+                      "concept": "5018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "DIARREIA CRÓNICA > 1 MÊS"
+                    },
+                    {
+                      "concept": "a8bc94b7-9082-11e6-a98e-000c29db4475",
+                      "label": "Encefalite australiana"
+                    },
+                    {
+                      "concept": "c03d9343-9082-11e6-a98e-000c29db4475",
+                      "label": "Doença pelo HIV resultando em encefalopatia"
+                    },
+                    {
+                      "concept": "155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "EPILEPSIA"
+                    },
+                    {
+                      "concept": "a02a1759-9082-11e6-a98e-000c29db4475",
+                      "label": "Estomatite ulcerativa necrotizante"
+                    },
+                    {
+                      "concept": "e1eafbce-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "FEBRE"
+                    },
+                    {
+                      "concept": "e1cffa18-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "GASTROENTERITE"
+                    },
+                    {
+                      "concept": "e1cf5590-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "GENGIVITE"
+                    },
+                    {
+                      "concept": "e1e52f28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "HERPES SIMPLES > 1 MÊS OU VISCERAL"
+                    },
+                    {
+                      "concept": "e1d608cc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "HERPES ZOSTER"
+                    },
+                    {
+                      "concept": "e1d69314-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "HIPERTENSAO"
+                    },
+                    {
+                      "concept": "e1cf405a-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INFECCAO DO TRATO RESPIRATORIO, SUPERIOR"
+                    },
+                    {
+                      "concept": "e1cde53e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INFECCAO URINARIA"
+                    },
+                    {
+                      "concept": "e1cdea3e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MENINGITE, NSA"
+                    },
+                    {
+                      "concept": "e1d90dce-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MOLUSCO CONTAGIOSO"
+                    },
+                    {
+                      "concept": "e1d0103e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "OTITE EXTERNA"
+                    },
+                    {
+                      "concept": "e1cdd490-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "PNEUMONIA"
+                    },
+                    {
+                      "concept": "879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "PRURIDO"
+                    },
+                    {
+                      "concept": "e1d2984a-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "SARCOMA DE KAPOSI"
+                    },
+                    {
+                      "concept": "61a93abd-9087-11e6-a98e-000c29db4475",
+                      "label": "Caquexia"
+                    },
+                    {
+                      "concept": "e1d01476-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "SINUSITE"
+                    },
+                    {
+                      "concept": "e1d607b4-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "TINHA DO CORPO"
+                    },
+                    {
+                      "concept": "de8f1eeb-9082-11e6-a98e-000c29db4475",
+                      "label": "Toxoplasmose"
+                    },
+                    {
+                      "concept": "e1e2b07c-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "TUBERCULOSE EXTRAPULMONAR"
+                    },
+                    {
+                      "concept": "e1cdd38c-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "TUBERCULOSE PULMONAR"
+                    },
+                    {
+                      "concept": "892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "VARICELA"
+                    },
+                    {
+                      "concept": "e1dc8ac6-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "Cancro do Colo do útero"
+                    },
+                    {
+                      "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "OUTRO, NAO CODIFICADO"
+                    }
+                  ]
+                },
+                "id": "infeccoesOportunistas",
+                "label": "Infecções oportunistas incluindo Sarcoma de Kaposi e outras doenças"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "e1dd2d50-1d5f-11e0-b929-000c29ad1d07"
+                },
+                "id": "outroDiagnostico",
+                "label": "Outros",
+                "hide": {
+                  "hideWhenExpression": "!arrayContains(infeccoesOportunistas,'5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Estadio OMS",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "e1e53c02-1d5f-11e0-b929-000c29ad1d07",
+                  "answers": [
+                    {
+                      "concept": "e1d9055e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ESTADIO I OMS"
+                    },
+                    {
+                      "concept": "e1d9066c-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ESTADIO II OMS"
+                    },
+                    {
+                      "concept": "e1d9077a-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ESTADIO III OMS"
+                    },
+                    {
+                      "concept": "e1d90888-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ESTADIO IV OMS"
+                    }
+                  ]
+                },
+                "id": "estatioOmsActual",
+                "label": "Estadio OMS Actual"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,80 @@
+{
+    "name": "Rastreio Tuberculose (TB)",
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "description": "Rastreio Tuberculose",
+    "version": "1",
+    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "published": true,
+    "retired": false,
+    "pages": [
+      {
+        "label": "Rastreio Tuberculose (TB)",
+        "sections": [
+          {
+            "label": "Rastreio Tuberculose",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "concept": "2eab4e55-d0d0-4fa8-8d23-b40eaaee44c8",
+                  "rendering": "select",
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Não"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Sim"
+                    }
+                  ]
+                },
+                "id": "temSintomas",
+                "label": "Tem Sintomas?"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "checkbox",
+                  "concept": "e1de6d1e-1d5f-11e0-b929-000c29ad1d07",
+                  "answers": [
+                    {
+                      "concept": "e1de6878-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "FEBRE POR MAIS DE 3 SEMANA"
+                    },
+                    {
+                      "concept": "e1de6a12-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "PERDEU PESO - MAIS DE 3 KG.NO ULTIMO MÊS"
+                    },
+                    {
+                      "concept": "e1de66e8-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "SUORES Á NOITE POR MAIS DE 3 SEMANAS"
+                    },
+                    {
+                      "concept": "e1de63d2-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "TOSSE POR MAIS DE 3 SEMANAS"
+                    },
+                    {
+                      "concept": "44b63d4c-341b-48f0-baa0-ce88ed7afc71",
+                      "label": "Astenia"
+                    },
+                    {
+                      "concept": "e1de6b98-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ALGUEM EM CASA ESTA TRATANDO A TB"
+                    }
+                  ]
+                },
+                "id": "quaisSintomas",
+                "label": "Quais sintomas de TB:",
+                "hide": {
+                  "hideWhenExpression": "temSintomas !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
