@@ -1,0 +1,88 @@
+{
+    "name": "Avaliação nutricional - adulto",
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "description": "Formulário para capturar dados de avaliação nutricional para adultos, usado no workflow da consulta clínica.",
+    "version": "1",
+    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "published": true,
+    "retired": false,
+    "pages": [
+      {
+        "label": "Avaliação nutricional - adulto",
+        "sections": [
+          {
+            "label": "Avaliação Nutricional - Indicadores",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "4b4280d6-976d-4b0d-90b3-e28adb431f61",
+                  "answers": [
+                    {
+                      "concept": "e1da52ba-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INDICE MASSA CORPORAL"
+                    },
+                    {
+                      "concept": "1343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "PERIMETRO BRAQUIAL"
+                    },
+                    {
+                      "concept": "98d34752-3034-4d22-81d5-2ab0c646406e",
+                      "label": "INDICE DE MASSA CORPORAL / IDADE"
+                    },
+                    {
+                      "concept": "d33778f5-9bc2-4e04-aa5a-0af6002c540a",
+                      "label": "PESO / ESTATURA"
+                    }
+                  ]
+                },
+                "id": "avaliacaoNutricionalIndicador",
+                "label": "Ava. Nutric. Indicador"
+              }
+            ]
+          },
+          {
+            "label": "Avaliação nutricional - Grau",
+            "isExpanded": "true",
+            "questions": []
+          },
+          {
+            "label": "Ava. Nutric. Grau",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "0b1a2c8c-55d2-42a8-a3d6-62828f52d49a",
+                  "answers": [
+                    {
+                      "concept": "e1d85b22-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "NORMAL"
+                    },
+                    {
+                      "concept": "aa84f34d-11f7-4466-b784-0fdda716ace2",
+                      "label": "DESNUTRIÇÃO LIGEIRA"
+                    },
+                    {
+                      "concept": "e1dec764-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MALNUTRICAO GRAVE SEM RESPOSTA AO TRATAMENTO (P/A <70%)"
+                    },
+                    {
+                      "concept": "e1cf1422-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MALNUTRIÇÃO MODERADA SEM RESPOSTA AO TRATAMENTO (P/A 70-79%)"
+                    }
+                  ]
+                },
+                "id": "classificacaoDeDesnutricao",
+                "label": "Classificação de Desnutrição"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,88 @@
+{
+    "name": "Rastreio, diagnostico e TT ITS",
+    "processor": "EncounterFormProcessor",
+    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "referencedForms": [],
+    "description": "Formulário para captura de dados de rastreio, diagnostico e TT ITS, usado no workflow da consulta clínica.",
+    "version": "1",
+    "published": true,
+    "retired": false,
+    "pages": [
+      {
+        "label": "Rastreio, diagnostico e TT ITS",
+        "sections": [
+          {
+            "label": "ITS - Tem Sintomas?",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "794ef662-03bc-4e22-90ff-38742b82827a",
+                  "toggleOptions": {
+                    "labelTrue": "Sim",
+                    "labelFalse": "Não"
+                  },
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Não"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Sim"
+                    }
+                  ]
+                },
+                "id": "temSintomas",
+                "label": "ITS - Tem sintomas?"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "e1cfe1e0-1d5f-11e0-b929-000c29ad1d07",
+                  "answers": [
+                    {
+                      "concept": "e1d01584-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "SIFILIS"
+                    },
+                    {
+                      "concept": "e1eb3792-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "CORRIMENTO URETRAL"
+                    },
+                    {
+                      "concept": "e1d62cee-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "ULCERAS GENETAIS"
+                    },
+                    {
+                      "concept": "e1d689d2-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "DOENCA INFLAMATORIA PELVICA"
+                    },
+                    {
+                      "concept": "e1eb356c-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "LEUCORREIAS"
+                    },
+                    {
+                      "concept": "29c0b8c9-9086-11e6-a98e-000c29db4475",
+                      "label": "Transtorno inflamatório do escroto"
+                    },
+                    {
+                      "concept": "99fd3825-9082-11e6-a98e-000c29db4475",
+                      "label": "Granuloma inguinal"
+                    }
+                  ]
+                },
+                "id": "diagnosticosIts",
+                "label": "Diagnósticos ITS",
+                "hide": {
+                  "hideWhenExpression": "temSintomas !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

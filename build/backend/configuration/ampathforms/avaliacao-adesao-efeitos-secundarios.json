@@ -1,0 +1,173 @@
+{
+    "name": "Avaliação de adesão e efeitos secundários",
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "description": "Formulário para avaliação de adesão e efeitos secundários, usado no workflow da consulta clínica. ",
+    "version": "1",
+    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "published": true,
+    "retired": false,
+    "pages": [
+      {
+        "label": "Avaliação de adesão e efeitos secundários",
+        "sections": [
+          {
+            "label": "Adesão",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "983773e6-d42c-4ad3-89a7-9191a8b8d52b",
+                  "answers": [
+                    {
+                      "concept": "e1dac772-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "BOM"
+                    },
+                    {
+                      "concept": "e1dac970-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MAU"
+                    },
+                    {
+                      "concept": "e1de519e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "TEM ALGUM RISCO DE POBRE ADERÊNCIA"
+                    }
+                  ]
+                },
+                "id": "adesao",
+                "label": "Adesão"
+              }
+            ]
+          },
+          {
+            "label": "Efeitos Secundários",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "checkbox",
+                  "concept": "e1e07ece-1d5f-11e0-b929-000c29ad1d07",
+                  "answers": [
+                    {
+                      "concept": "44d63565-9087-11e6-a98e-000c29db4475",
+                      "label": "Náusea e vômitos"
+                    },
+                    {
+                      "concept": "e1cdb97e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "DIARREIA"
+                    },
+                    {
+                      "concept": "e1d5f8be-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "NEUROPATIA PERIFERICA"
+                    },
+                    {
+                      "concept": "740dff18-9085-11e6-a98e-000c29db4475",
+                      "label": "Erupção cutânea generalizada devida a drogas e medicamentos"
+                    },
+                    {
+                      "concept": "63aa3de4-9087-11e6-a98e-000c29db4475",
+                      "label": "Hiperglicemia não especificada"
+                    },
+                    {
+                      "concept": "1fc95721-0c2a-41c5-ba05-8f8ca484fc2f",
+                      "label": "DISLIPIDEMIA"
+                    },
+                    {
+                      "concept": "06637aa6-aeda-4b15-b86c-bd555f69c9af",
+                      "label": "LIPODISTROFIA"
+                    },
+                    {
+                      "concept": "b9fe8ecb-a41d-49d3-b6f6-2c381715262d",
+                      "label": "CITOPENIA"
+                    },
+                    {
+                      "concept": "20627f0d-858e-4465-a1e1-04f83a962224",
+                      "label": "PANCREATITE"
+                    },
+                    {
+                      "concept": "8956c7ea-847a-4f70-91e8-e1cf325b85df",
+                      "label": "NEFROTOXICIDADE"
+                    },
+                    {
+                      "concept": "e1cdc68a-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "HEPATITE"
+                    },
+                    {
+                      "concept": "d0d485d3-3082-4b1b-a450-6cad31eb56b3",
+                      "label": "SINDROME DE STEVE JOHNSON"
+                    },
+                    {
+                      "concept": "833aba0d-430a-4537-b202-94c32e9a1317",
+                      "label": "HIPERSENSIBILIDADE A ABC/RAL"
+                    },
+                    {
+                      "concept": "c7089026-9135-4cd8-af18-596e14e4c512",
+                      "label": "ACIDOSE LACTICA"
+                    },
+                    {
+                      "concept": "da3dea8e-9b35-4025-ad5e-cd9aad7707aa",
+                      "label": "ESTEATOSE HEPATICA COM HIPERLACTEMIA"
+                    },
+                    {
+                      "concept": "e1cfc94e-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "DOR ABDOMINAL"
+                    }
+                  ]
+                },
+                "id": "efeitosSecundarios",
+                "label": "Efeitos Secundários"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "01ce78dd-074b-407c-ba30-27ec9336e0f8",
+                  "toggleOptions": {
+                    "labelTrue": "Sim",
+                    "labelFalse": "Não"
+                  },
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Não"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Sim"
+                    }
+                  ]
+                },
+                "id": "efeitosSecundariosInh",
+                "label": "Efeitos Secundários (INH)"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "689cd895-eb45-4712-9b41-8756bc0514ed",
+                  "toggleOptions": {
+                    "labelTrue": "Sim",
+                    "labelFalse": "Não"
+                  },
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Não"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Sim"
+                    }
+                  ]
+                },
+                "id": "efeitosSecundariosCtz",
+                "label": "Efeitos Secundários (CTZ)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
