@@ -194,6 +194,11 @@
           "lab-results-summary-widget"
         ]
       },
+      "patient-chart-test-results-dashboard-slot": {
+        "remove": [
+          "results-viewer"
+        ]
+      },
       "patient-chart-dashboard-slot": {
         "configure": {
           "encounters-summary-dashboard": {
