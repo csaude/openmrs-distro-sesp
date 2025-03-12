@@ -303,14 +303,14 @@
       ]
     }
   },
-  "@openmrs/esm-patient-forms-app": {
+  "@csaude/esm-patient-forms-app": {
     "Display conditions": {
       "privileges": [
         "Get Forms"
       ]
     }
   },
-  "@openmrs/esm-patient-medications-app": {
+  "@csaude/esm-patient-medications-app": {
     "Display conditions": {
       "privileges": [
         "Get Care Settings"
@@ -337,7 +337,7 @@
       }
     }
   },
-  "@openmrs/esm-patient-programs-app": {
+  "@csaude/esm-patient-programs-app": {
     "Display conditions": {
       "privileges": [
         "Add Patient Programs"
