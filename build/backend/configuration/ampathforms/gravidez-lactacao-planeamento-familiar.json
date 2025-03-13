@@ -4,7 +4,7 @@
     "referencedForms": [],
     "description": "Formulário para captura de dados de gravidez, lactação e planeamento familiar, usado no workflow da consulta clínica.",
     "version": "1",
-    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "encounter": "S.TARV: ADULTO SEGUIMENTO",
     "published": true,
     "retired": false,
     "pages": [

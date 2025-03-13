@@ -1,7 +1,7 @@
 {
     "name": "Rastreio, diagnostico e TT ITS",
     "processor": "EncounterFormProcessor",
-    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "encounter": "S.TARV: ADULTO SEGUIMENTO",
     "referencedForms": [],
     "description": "Formulário para captura de dados de rastreio, diagnostico e TT ITS, usado no workflow da consulta clínica.",
     "version": "1",

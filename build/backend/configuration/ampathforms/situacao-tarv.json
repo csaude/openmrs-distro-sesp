@@ -1,7 +1,7 @@
 {
     "name": "Situação TARV",
     "processor": "EncounterFormProcessor",
-    "encounterType": "Master Card - Ficha Resumo",
+    "encounter": "Master Card - Ficha Resumo",
     "published": true,
     "retired": false,
     "referencedForms": [],

@@ -4,7 +4,7 @@
     "referencedForms": [],
     "description": "Infecções oportunistas",
     "version": "1",
-    "encounterType": "S.TARV: ADULTO SEGUIMENTO",
+    "encounter": "S.TARV: ADULTO SEGUIMENTO",
     "published": true,
     "retired": false,
     "pages": [
