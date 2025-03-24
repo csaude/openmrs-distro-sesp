@@ -34,5 +34,5 @@ COPY --from=dev /openmrs/distribution/openmrs_modules /usr/local/tomcat/.OpenMRS
 COPY --from=dev /openmrs/distribution/openmrs_owas /usr/local/tomcat/.OpenMRS/owa
 
 COPY configuration /usr/local/tomcat/.OpenMRS/configuration
-COPY openmrs-runtime.properties /usr/local/tomcat/openmrs-runtime.properties
+COPY openmrs-runtime.properties /openmrs-runtime.properties
 COPY setenv.sh /usr/local/tomcat/bin/setenv.sh
