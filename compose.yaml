@@ -36,6 +36,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime
       - ./backend/logs:/usr/local/tomcat/logs
+      - openmrs-data:/usr/local/tomcat/.OpenMRS
 
   db:
     image: hub.csaude.org.mz/sesp/mysql:8.4.2
@@ -52,9 +53,10 @@ services:
       MYSQL_LOG_DIRECTORY: /var/lib/mysql/log
     volumes:
       - /etc/localtime:/etc/localtime
-      - ./database/conf:/etc/mysql
-      - ./database/scripts:/scripts
+      # - ./database/conf:/etc/mysql
+      # - ./database/scripts:/scripts
       - db-data:/var/lib/mysql
 
 volumes:
   db-data:
+  openmrs-data:
