@@ -52,8 +52,8 @@ services:
       MYSQL_LOG_DIRECTORY: /var/lib/mysql/log
     volumes:
       - /etc/localtime:/etc/localtime
-      # - ./database/conf:/etc/mysql
-      # - ./database/scripts:/scripts
+      - ./database/conf:/etc/mysql
+      - ./database/scripts:/scripts
       - db-data:/var/lib/mysql
 
 volumes:
