@@ -1,7 +1,7 @@
 {
     "name": "Referência",
     "processor": "EncounterFormProcessor",
-    "encounterType": "Master Card - Ficha Resumo",
+    "encounter": "S.TARV: ADULTO SEGUIMENTO",
     "published": true,
     "retired": false,
     "referencedForms": [],
