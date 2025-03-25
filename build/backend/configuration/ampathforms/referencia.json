@@ -1,0 +1,301 @@
+{
+    "name": "Referência",
+    "processor": "EncounterFormProcessor",
+    "encounter": "S.TARV: ADULTO SEGUIMENTO",
+    "published": true,
+    "retired": false,
+    "referencedForms": [],
+    "description": "Referência",
+    "version": "1.0",
+    "pages": [
+      {
+        "label": "Referência",
+        "sections": [
+          {
+            "label": "Referência",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "e1da001c-1d5f-11e0-b929-000c29ad1d07",
+                  "answers": [
+                    {
+                      "concept": "e1e6844a-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "TRATAMENTO DE TUBERCULOSE OU PROGRAMA DE DOT"
+                    },
+                    {
+                      "concept": "e1dca6e6-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "PREVENCAO DE TRANSMISSAO VERTICAL"
+                    },
+                    {
+                      "concept": "e1e026a4-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "PLANEMENTO FAMILIAR (NAO ESTA EM USO)"
+                    },
+                    {
+                      "concept": "e1e0a8cc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "APOIO PSICOLOGICO INDIVIDUAL"
+                    },
+                    {
+                      "concept": "e2297477-2ca5-4eae-8abf-6b69b5c351b0",
+                      "label": "REVELAÇÃO DO DIAGNOSTICO A CRIANÇA / ADOLESCENTE"
+                    },
+                    {
+                      "concept": "e1de15f8-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "CUIDADOS DOMICILIARIOS"
+                    },
+                    {
+                      "concept": "fbf06ef5-5f6f-47fb-96cd-a55db1c805f2",
+                      "label": "REFORÇAR A PARTICIPAÇÃO EM GRUPO DE APOIO/ ASSOCIAÇÕES COMUNITÁRIAS"
+                    },
+                    {
+                      "concept": "e7fe152a-50d7-4a0b-bcbc-c19b69c586c0",
+                      "label": "Hospital de referência"
+                    },
+                    {
+                      "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "OUTRO, NAO CODIFICADO"
+                    }
+                  ]
+                },
+                "id": "referencias",
+                "label": "Sectores"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "e1dd2d50-1d5f-11e0-b929-000c29ad1d07"
+                },
+                "id": "outro",
+                "label": "Outro/Encaminhamentos Para ",
+                "hide": {
+                  "hideWhenExpression": "referencias !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Grupo de Apoio",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "d4f186d3-4ea4-4da9-aa6b-3ad658c25d18",
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Não"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Sim"
+                    }
+                  ]
+                },
+                "id": "elegivelAoGrupoDeApoio",
+                "label": "Elegível ao Grupo de Apoio"
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "70cb2221-d0bd-4e30-bbd5-7da8a3ba01ab",
+                  "answers": [
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "criancasReveladas",
+                "label": "Crianças Reveladas",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "7a72cf0c-5f43-436d-92d9-6f04cbb0a0b9",
+                  "answers": [
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "paisECuidadores",
+                "label": "Pais e Cuidadores",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "230c81e9-961f-478a-987d-3af637e83e5e",
+                  "answers": [
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "adolescentesRevelados",
+                "label": "Adolescentes Revelados",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "ae8d45d0-14b9-460e-888d-f883de83be26",
+                  "answers": [
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "maeParaMae",
+                "label": "Mãe para mãe",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "a1d858ea-3a19-41e1-879d-2457440e1d36",
+                  "answers": [
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "maesMentoras",
+                "label": "Mães Mentoras",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "4387180e-695f-4c99-8182-33e51907062a",
+                  "answers": [
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "adolescentesEJovemMentor",
+                "label": "Adolescente e Jovem Mentor",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "b856b79b-2e8e-4764-ae8b-c8b509cdda76",
+                  "answers": [
+                    {
+                      "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "INICIAR"
+                    },
+                    {
+                      "concept": "e1d9f036-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "MANTER"
+                    },
+                    {
+                      "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                      "label": "COMPLETO"
+                    }
+                  ]
+                },
+                "id": "homemCampeao",
+                "label": "Homem Campeão",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              },
+              {
+                "type": "obs",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "f22a9436-4ed4-401c-84ea-0c7dbf910639"
+                },
+                "id": "outroGrupoDeApoio",
+                "label": "Outro Grupo de Apoio",
+                "hide": {
+                  "hideWhenExpression": "elegivelAoGrupoDeApoio !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
