@@ -1,0 +1,174 @@
+{
+  "name": "MDS Primeira Consulta",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "description": "MDS",
+  "version": "1",
+  "encounter": "S.TARV: ADULTO SEGUIMENTO",
+  "published": true,
+  "retired": false,
+  "pages": [
+    {
+      "label": "Modelos Diferenciados de Cuidados (MDC)",
+      "sections": [
+        {
+          "label": "MDS",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "01533658-e014-493b-9d52-4f49f50ec68b",
+                "answers": [
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  },
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  }
+                ]
+              },
+              "id": "elegivelAoModelo",
+              "label": "Elegível ao Modelo Diferenciado de Cuidados"
+            }
+          ]
+        },
+        {
+          "label": "Adicionar MDS",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "repeating",
+                "concept": "bebcfbe3-bb5b-4c5c-a41e-808fc4457fc3"
+              },
+              "id": "mdsConvset",
+              "label": "Adicionar MDS",
+              "questions": [
+                {
+                  "type": "obs",
+                  "questionOptions": {
+                    "concept": "40a9a12b-1205-4a55-bb93-caf15452bf61",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "687d72a2-c123-42b1-8083-968c4588b243",
+                        "label": "DISPENSA BIMESTRAL"
+                      },
+                      {
+                        "concept": "b5c31d5e-165a-4618-aa62-113a0751a400",
+                        "label": "DISPENSA TRIMESTRAL (DT)"
+                      },
+                      {
+                        "concept": "3069be5c-cd02-4ddb-aa1f-bdd71d3dd6be",
+                        "label": "DISPENSA SEMESTRAL"
+                      },
+                      {
+                        "concept": "018ba584-3158-4075-82f7-c84c51f5085c",
+                        "label": "DISPENSA ANUAL DE ARV"
+                      },
+                      {
+                        "concept": "bcedb8c1-f1d9-48c2-bfe3-9401950f1c16",
+                        "label": "DISPENSA DESCENTRALIZADA DE ARV"
+                      },
+                      {
+                        "concept": "870e2d25-c5ef-4e36-89db-0a4a37af214e",
+                        "label": "DISPENSA COMUNITÁRIA VIA PROVEDOR"
+                      },
+                      {
+                        "concept": "0843c71b-be47-4de2-ba16-a08db52c1136",
+                        "label": "DISPENSA COMUNIT&Aacute;RIA VIA APE"
+                      },
+                      {
+                        "concept": "0b639730-70ae-44b8-a90f-c24ce7af31e4",
+                        "label": "BRIGADAS MOVEIS (DCBM)"
+                      },
+                      {
+                        "concept": "0b35d894-49c6-45bc-880b-8c816f659e6e",
+                        "label": "CLINICAS MVEIS (DCCM)"
+                      },
+                      {
+                        "concept": "d2380393-3621-421f-83fc-846d2d332904",
+                        "label": "ABORDAGEM FAMILIAR (AF)"
+                      },
+                      {
+                        "concept": "1fb0de79-31c6-4a31-a832-0c29f3c01e93",
+                        "label": "FLUXO RÁPIDO (FR)"
+                      },
+                      {
+                        "concept": "f46bfb16-240d-4bd3-a497-d23afd377f4f",
+                        "label": "Gaac (GA)"
+                      },
+                      {
+                        "concept": "5d82b491-2ca2-41ea-b091-16ffc5169aa1",
+                        "label": "CLUBES DE ADESÃO (CA)"
+                      },
+                      {
+                        "concept": "c95ec0b3-f175-48e8-8fc0-a6cb2d249ed5",
+                        "label": "EXTENSAO DE HORARIO"
+                      },
+                      {
+                        "concept": "e8aa76e4-f105-4de4-b3d8-617c526cc199",
+                        "label": "PARAGEM UNICA NO SECTOR DA TB"
+                      },
+                      {
+                        "concept": "a8b3dd5a-fcc1-4e5c-a6a7-4d51c31b33da",
+                        "label": "PARAGEM UNICA NOS SERVICOS DE TARV"
+                      },
+                      {
+                        "concept": "8d4ba67e-3e45-425c-b48c-104028dd7cec",
+                        "label": "PARAGEM UNICA NO SAAJ"
+                      },
+                      {
+                        "concept": "fc78cb84-f9a4-4d64-9569-2ff301af36ea",
+                        "label": "PARAGEM UNICA NA SMI"
+                      },
+                      {
+                        "concept": "26b01a43-32d6-4bf9-aa1a-0d8d03aab463",
+                        "label": "DOENCA AVANCADA POR HIV"
+                      }
+                    ]
+                  },
+                  "id": "mdc",
+                  "label": "MDC"
+                },
+                {
+                  "type": "obs",
+                  "required": true,
+                  "questionOptions": {
+                    "rendering": "radio",
+                    "concept": "fef178f2-d4c9-4035-9989-11c9afe81ea3",
+                    "answers": [
+                      {
+                        "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                        "label": "INICIAR"
+                      }
+                    ]
+                  },
+                  "id": "estado",
+                  "label": "Estado"
+                }
+              ]
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "815b9762-329d-42c8-9158-d42016c49b85",
+                "rendering": "text"
+              },
+              "id": "outroModelo",
+              "label": "Outro Modelo"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "elegivelAoModelo !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        }
+      ]
+    }
+  ]
+}
