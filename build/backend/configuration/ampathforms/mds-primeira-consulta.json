@@ -139,15 +139,19 @@
                 {
                   "type": "obs",
                   "required": true,
+                  "readonly": true,
                   "questionOptions": {
-                    "rendering": "radio",
+                    "rendering": "select",
                     "concept": "fef178f2-d4c9-4035-9989-11c9afe81ea3",
                     "answers": [
                       {
                         "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
                         "label": "INICIAR"
                       }
-                    ]
+                    ],
+                    "calculate": {
+                      "calculateExpression": "'e1d9ef28-1d5f-11e0-b929-000c29ad1d07'"
+                    }
                   },
                   "id": "estado",
                   "label": "Estado"
