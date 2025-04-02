@@ -36,7 +36,7 @@
     "@openmrs/esm-patient-vitals-app": "next",
     "@openmrs/esm-service-queues-app": "next",
     "@openmrs/esm-laboratory-app": "next",
-    "@openmrs/esm-appointments-app": "next",
+    "@csaude/esm-appointments-app": "next",
     "@openmrs/esm-patient-tests-app": "next",
     "@openmrs/esm-form-builder-app": "next"
   }
