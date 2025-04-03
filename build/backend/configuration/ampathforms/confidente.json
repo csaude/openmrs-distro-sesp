@@ -1,0 +1,137 @@
+{
+  "name": "Dados do Confidente",
+  "processor": "EncounterFormProcessor",
+  "encounter": "Master Card - Ficha Resumo",
+  "referencedForms": [],
+  "published": true,
+  "description": "Dados do Confidente - Consulta de admissao",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Dados do Confidente",
+      "sections": [
+        {
+          "label": "Dados do Confidente",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "e1de46a4-1d5f-11e0-b929-000c29ad1d07"
+              },
+              "id": "nome",
+              "label": "Nome"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "dbf852ab-697f-4c92-a546-74e5301de419",
+                "answers": [
+                  {
+                    "concept": "e1e01c9a-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AMIGO OU COLEGA"
+                  },
+                  {
+                    "concept": "e1d6f264-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AVO"
+                  },
+                  {
+                    "concept": "e1e09bf2-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CHEFE DE  BAIRRO"
+                  },
+                  {
+                    "concept": "a45237a4-9d90-460b-ad8f-ea81a048bfa9",
+                    "label": "FILHO"
+                  },
+                  {
+                    "concept": "e1d6f16a-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "IRMAO"
+                  },
+                  {
+                    "concept": "e1d6ef76-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "MAE"
+                  },
+                  {
+                    "concept": "be234c58-760f-471d-80c0-ce1217bcc31b",
+                    "label": "NETO"
+                  },
+                  {
+                    "concept": "e1d6f070-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "PAI"
+                  },
+                  {
+                    "concept": "e1df78b2-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "PARCEIRO"
+                  },
+                  {
+                    "concept": "a3594c0a-9e24-42be-a732-1a277ebd3951",
+                    "label": "PRIMO"
+                  },
+                  {
+                    "concept": "e1d7aa9c-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TIA"
+                  },
+                  {
+                    "concept": "173580ba-859c-42cc-8d74-3a46564c8a0f",
+                    "label": "TRABALHADOR"
+                  },
+                  {
+                    "concept": "e1e09832-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "VIZINHO"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OUTRO, NAO CODIFICADO"
+                  }
+                ]
+              },
+              "id": "parentesco",
+              "label": "Parentesco"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "outroGraoDeParentesco",
+              "label": "Outro Grau de Parentesco",
+              "hide": {
+                "hideWhenExpression": "parentesco !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "eb23c94a-2c2e-40fa-ab82-22308b1c5f27"
+              },
+              "id": "numeroCondidente1",
+              "label": "Tel.Cel(1)"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "eb23c94a-2c2e-40fa-ab82-22308b1c5f27"
+              },
+              "id": "numeroCondidente2",
+              "label": "Tel.Cel(2)"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "e1e0c208-1d5f-11e0-b929-000c29ad1d07"
+              },
+              "id": "endereco",
+              "label": "Endereço"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
