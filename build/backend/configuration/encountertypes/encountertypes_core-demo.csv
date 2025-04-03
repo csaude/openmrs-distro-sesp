@@ -1,3 +1,4 @@
 Uuid,Void/Retire,Name,Description,View privilege,Edit privilege,_order:1000
 3596fafb-6f6f-4396-8c87-6e63a0f1bd71,,Lab Results,Encounter for capturing lab results,,,
 39da3525-afe4-45ff-8977-c53b7b359158,,Order,Encounter for capturing orders,,,
+da23f8fb-2ccf-4145-8bc0-1dfa903a41c5,,Consulta de admissão,Consulta de admissão para colher dados adicionais do utente,,,
