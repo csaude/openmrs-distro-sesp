@@ -4,6 +4,7 @@
   "encounter": "Master Card - Ficha Resumo",
   "referencedForms": [],
   "published": true,
+  "retired": false,
   "description": "Situação Familiar - Consulta de admissao",
   "version": "1.0",
   "pages": [

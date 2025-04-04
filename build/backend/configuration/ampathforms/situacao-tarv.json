@@ -3,6 +3,7 @@
   "processor": "EncounterFormProcessor",
   "encounter": "Master Card - Ficha Resumo",
   "published": true,
+  "retired": false,
   "referencedForms": [],
   "description": "Situação TARV - Consulta de Admissão",
   "version": "1.0",
