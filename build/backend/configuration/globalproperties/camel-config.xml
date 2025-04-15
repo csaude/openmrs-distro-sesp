@@ -1,0 +1,17 @@
+<config>
+    <globalProperties>
+        <globalProperty>
+            <property>camel.artemis.url</property>
+            <value>tcp://artemis-broker:61616</value>
+        </globalProperty>
+        <globalProperty>
+            <property>camel.artemis.username</property>
+            <value>artemis</value>
+        </globalProperty>
+        <globalProperty>
+            <property>camel.artemis.password</property>
+            <value>artemis</value>
+        </globalProperty>
+    </globalProperties>
+</config>
+  

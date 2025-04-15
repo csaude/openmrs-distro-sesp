@@ -36,6 +36,11 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime
       - ./backend/logs:/usr/local/tomcat/logs
+    environment:
+      - ARTEMIS_URL=tcp://artemis-broker:61616  # Configuração do Artemis
+    networks:
+      - default 
+      - interop-network  # Somente este precisa se comunicar com o Artemis
 
   db:
     image: hub.csaude.org.mz/sesp/mysql:8.4.2
@@ -55,6 +60,11 @@ services:
       - ./database/conf:/etc/mysql
       - ./database/scripts:/scripts
       - db-data:/var/lib/mysql
+
+
+networks:
+  interop-network:
+    external: true
 
 volumes:
   db-data:
