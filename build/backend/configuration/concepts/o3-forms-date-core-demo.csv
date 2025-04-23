@@ -1,0 +1,11 @@
+Uuid,Void/Retire,Same as mappings,Fully specified name:en,Fully specified name:fr,Fully specified name:es,Short name:en,Short name:fr,Short name:es,Description:en,Description:fr,Description:es,Data class,Data type,_version:1,_order:1000
+902ebb38-0e07-46a9-808a-4e340d354a15,,,PRESUMPTIVE DIAGNOSIS IN CHILDREN LESS THAN 18 MONTHS - DATE,,,,,,,,,Question,Date,,
+210cf6cc-bf58-420c-9f26-7d636a028b13,,,CD4 ABSOLUTO - DATE,,,,,,,,,Question,Date,,
+8f114d47-d2f7-4adb-8b22-42d1560759e7,,,HIV CARGA VIRAL - DATE,,,,,,,,,Question,Date,,
+10309db3-5b1b-41dd-91f2-ab8f6ff64f38,,,Regime TPT - START DATE,,,,,,,,,Question,Date,,
+7e2f7722-c256-4e1b-a225-7244a4cb4878,,,Regime TPT - END DATE,,,,,,,,,Question,Date,,
+e3252b52-ea75-449f-acbe-27653afe315c,,,PTV - DATE,,,,,,,,,Question,Date,,
+3ee202fc-1882-42c3-8c46-27cfce64a3f4,,,PPE - DATE,,,,,,,,,Question,Date,,
+f0f52116-dd4b-44be-8ff4-7dc8234b276d,,,PrEP -DATE,,,,,,,,,Question,Date,,
+c318e565-ec71-4761-a127-2783a6d747c5,,,Outro - DATE,,,,,,,,,Question,Date,,
+6e0c36b7-a6c8-4c35-a01d-0a410f82c833,,,REGIME ARV ALTERNATIVO A PRIMEIRA LINHA - DATE,,,,,,,,,Question,Date,,
