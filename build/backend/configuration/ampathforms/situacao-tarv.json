@@ -61,6 +61,48 @@
             {
               "type": "obs",
               "questionOptions": {
+                "rendering": "select",
+                "concept": "e1dc3e04-1d5f-11e0-b929-000c29ad1d07",
+                "answers": [
+                  {
+                    "concept": "e1d3d5de-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "NEVIRAPINA"
+                  },
+                  {
+                    "concept": "e1d5d988-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ZIDOVUDINA"
+                  },
+                  {
+                    "concept": "e1d5d438-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "D4T+3TC+NVP"
+                  },
+                  {
+                    "concept": "e1d3d2c8-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "LAMIVUDINA"
+                  },
+                  {
+                    "concept": "e1de9046-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TRATEMENTO ANTIRETROVIRAL"
+                  },
+                  {
+                    "concept": "e1de9140-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ZIDOVUDINA + NEVIRAPINA"
+                  },
+                  {
+                    "concept": "e1d3d4da-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ZIDOVUDINA + LAMIVUDINA"
+                  }
+                ]
+              },
+              "id": "profilaxiaArvNaCpn",
+              "label": "ARVs",
+              "hide": {
+                "hideWhenExpression": "alreadyInTarv !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
                 "rendering": "checkbox",
                 "concept": "16f3d28e-03d5-467f-841c-ad678e9a4c19",
                 "answers": [
@@ -82,13 +124,140 @@
                   }
                 ]
               },
-              "id": "arvTomadosAnteriormente:",
+              "id": "arvTomadosAnteriormente",
               "label": "ARV tomados anteriormente",
               "hide": {
                 "hideWhenExpression": "alreadyInTarv !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "39cab1ff-93e7-4a5e-bd42-6f8e6cb39359"
+              },
+              "id": "outraExposicaoTarv",
+              "label": "Outra exposição ao TARV",
+              "hide": {
+                "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'39cab1ff-93e7-4a5e-bd42-6f8e6cb39359') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
           ]
+        },
+        {
+          "label": "PTV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "e3252b52-ea75-449f-acbe-27653afe315c"
+              },
+              "id": "ptvData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "66c0fb92-50f2-4021-a683-f841a17f9a35"
+              },
+              "id": "ptvLocal",
+              "label": "Local"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'e1dc0eca-1d5f-11e0-b929-000c29ad1d07') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "PPE",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "3ee202fc-1882-42c3-8c46-27cfce64a3f4"
+              },
+              "id": "ppeData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "feb55864-cbda-490c-abef-b53486cb58fb"
+              },
+              "id": "ppeLocal",
+              "label": "Local",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'cdcf3400-f17b-400b-82be-b22cb4f0ebb7') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "PrEP",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "f0f52116-dd4b-44be-8ff4-7dc8234b276d"
+              },
+              "id": "prepData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "722ae804-37d0-4fb9-84d7-45a9484d7e03"
+              },
+              "id": "prepLocal",
+              "label": "Local",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'c29e5740-8ea5-409e-b322-7414f36e2739') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Outra exposição ao TARV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c318e565-ec71-4761-a127-2783a6d747c5"
+              },
+              "id": "outraExposicaoData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "f65b5104-003e-485d-8a12-654ba1b62ad3"
+              },
+              "id": "outraExposicaoLocal",
+              "label": "Local",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'39cab1ff-93e7-4a5e-bd42-6f8e6cb39359') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
         },
         {
           "label": "Último CD4",
@@ -134,12 +303,14 @@
               "label": "Ultimo CD4 Semi-Quantitativo"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "210cf6cc-bf58-420c-9f26-7d636a028b13"
               },
               "id": "ultimoCD4Data",
-              "label": "Data"
+              "label": "Data",
+              "datePickerFormat": "calendar"
             }
           ],
           "hide": {
@@ -179,12 +350,14 @@
               "label": "Última Carga Viral Qualitativa"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "8f114d47-d2f7-4adb-8b22-42d1560759e7"
               },
               "id": "ultimaCargaViralData",
-              "label": "Data"
+              "label": "Data",
+              "datePickerFormat": "calendar"
             }
           ],
           "hide": {
@@ -234,8 +407,22 @@
                   }
                 ]
               },
+              "id": "estadoInicioTPT",
+              "label": "Estado"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "10309db3-5b1b-41dd-91f2-ab8f6ff64f38"
+              },
               "id": "estadoDataInicioTPT",
-              "label": "Data Inicio"
+              "label": "Data Inicio",
+              "datePickerFormat": "calendar",
+              "required": true,
+              "hide": {
+                "hideWhenExpression": "estadoInicioTPT != 'e1d9ef28-1d5f-11e0-b929-000c29ad1d07'"
+              }
             },
             {
               "type": "obs",
@@ -249,8 +436,22 @@
                   }
                 ]
               },
-              "id": "estadoDataFimTPT",
-              "label": "Data Fim"
+              "id": "estadoFimTPT",
+              "label": "Estado"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "7e2f7722-c256-4e1b-a225-7244a4cb4878"
+              },
+              "id": "estadoDataFimTPTDuplicate",
+              "label": "Data Fim",
+              "datePickerFormat": "calendar",
+              "required": true,
+              "hide": {
+                "hideWhenExpression": "estadoFimTPT != 'e1d9facc-1d5f-11e0-b929-000c29ad1d07'"
+              }
             }
           ],
           "hide": {
@@ -460,7 +661,7 @@
             }
           ],
           "hide": {
-            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !== 'F'"
           }
         },
         {
@@ -670,12 +871,14 @@
               "label": "Novo Regime"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "6e0c36b7-a6c8-4c35-a01d-0a410f82c833"
               },
               "id": "dataRegimeLinha1",
-              "label": "Data"
+              "label": "Data",
+              "datePickerFormat": "calendar"
             },
             {
               "type": "obs",
@@ -853,12 +1056,14 @@
               "label": "Novo Regime"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "6e0c36b7-a6c8-4c35-a01d-0a410f82c833"
               },
-              "id": "dataRegimeLinha1",
-              "label": "Data"
+              "id": "dataRegimeLinha2",
+              "label": "Data",
+              "datePickerFormat": "calendar"
             },
             {
               "type": "obs",
@@ -1036,12 +1241,14 @@
               "label": "Novo Regime"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "6e0c36b7-a6c8-4c35-a01d-0a410f82c833"
               },
-              "id": "dataRegimeLinha1",
-              "label": "Data"
+              "id": "dataRegimeLinha3",
+              "label": "Data",
+              "datePickerFormat": "calendar"
             },
             {
               "type": "obs",
