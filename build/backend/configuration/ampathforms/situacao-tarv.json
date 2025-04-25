@@ -1,381 +1,1308 @@
 {
-    "name": "Situação TARV",
-    "processor": "EncounterFormProcessor",
-    "encounter": "Master Card - Ficha Resumo",
-    "published": true,
-    "retired": false,
-    "referencedForms": [],
-    "description": "Verifica se o paciente ja estava em TARV alguma vez",
-    "version": "1.0",
-    "pages": [
-      {
-        "label": "Situação TARV",
-        "sections": [
-          {
-            "label": "Situação TARV",
-            "isExpanded": "true",
-            "questions": [
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "16f3d28e-03d5-467f-841c-ad678e9a4c19",
-                  "answers": [
-                    {
-                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Não"
-                    },
-                    {
-                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Sim"
-                    }
-                  ]
-                },
-                "id": "alreadyInTarv",
-                "label": "Alguma vez em TARV",
-                "required": true
+  "name": "Situação TARV - Consulta de Admissão",
+  "processor": "EncounterFormProcessor",
+  "encounter": "Master Card - Ficha Resumo",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "description": "Situação TARV - Consulta de Admissão",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Situação TARV",
+      "sections": [
+        {
+          "label": "Situação TARV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "16f3d28e-03d5-467f-841c-ad678e9a4c19",
+                "answers": [
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  },
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  }
+                ]
               },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "date",
-                  "concept": "e1d8f690-1d5f-11e0-b929-000c29ad1d07"
-                },
-                "id": "dataInicioTarv",
-                "label": "Data de inicio TARV",
-                "datePickerFormat": "calendar"
+              "id": "alreadyInTarv",
+              "label": "Alguma vez em TARV",
+              "required": true
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "6fe3f1f9-3488-446d-beef-8cf7555c2761",
+                "answers": [
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  },
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  }
+                ]
               },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "6fe3f1f9-3488-446d-beef-8cf7555c2761",
-                  "answers": [
-                    {
-                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Não"
-                    },
-                    {
-                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Sim"
-                    }
-                  ]
-                },
-                "id": "tomouArvAnteriormente",
-                "label": "Tomou ARVs anteriormente?",
-                "required": false,
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "concept": "16f3d28e-03d5-467f-841c-ad678e9a4c19",
-                  "rendering": "select",
-                  "answers": [
-                    {
-                      "concept": "e1dc0eca-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "TRATAMENTO PTV"
-                    },
-                    {
-                      "concept": "cdcf3400-f17b-400b-82be-b22cb4f0ebb7",
-                      "label": "PPE"
-                    },
-                    {
-                      "concept": "c29e5740-8ea5-409e-b322-7414f36e2739",
-                      "label": "PrEP"
-                    },
-                    {
-                      "concept": "39cab1ff-93e7-4a5e-bd42-6f8e6cb39359",
-                      "label": "Outra exposição ao TARV"
-                    }
-                  ]
-                },
-                "id": "profilaxiaComArv",
-                "label": "Profilaxia",
-                "hide": {
-                  "hideWhenExpression": "tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "concept": "e1dd5ab4-1d5f-11e0-b929-000c29ad1d07",
-                  "rendering": "number"
-                },
-                "id": "ultimoCd4Absoluto",
-                "label": "Ultimo CD4 Absoluto",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "concept": "e1d48fba-1d5f-11e0-b929-000c29ad1d07",
-                  "rendering": "number",
-                  "min": "0",
-                  "max": "100"
-                },
-                "id": "ultimoCd4Percentual",
-                "label": "Ultimo CD4 Percentual",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "db7f1675-8850-476d-bc09-70be975c0867",
-                  "answers": [
-                    {
-                      "concept": "e1d9ecf8-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "CD4 SUPERIOR A 200"
-                    },
-                    {
-                      "concept": "9395a2a8-21e9-4e06-bd2f-24c52f56cd21",
-                      "label": "CD4 menor ou igual a 200"
-                    }
-                  ]
-                },
-                "id": "ultimoCd4SemiQuantitativo",
-                "label": "Ultimo CD4 Semi-Quantitativo",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "number",
-                  "concept": "e1d6247e-1d5f-11e0-b929-000c29ad1d07"
-                },
-                "id": "quantitaveViralLoad",
-                "label": "Ultima carga viral quantitativa",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "e1da2704-1d5f-11e0-b929-000c29ad1d07",
-                  "answers": [
-                    {
-                      "concept": "cc8ef88c-6ab6-4404-a036-d415bc42cc1c",
-                      "label": "CARGA VIRAL INDETECTAVEL"
-                    },
-                    {
-                      "concept": "4df535db-b8c9-4759-85bb-f4bcb5bebdc6",
-                      "label": "MENOR QUE"
-                    }
-                  ]
-                },
-                "id": "qualitativeViralLoad",
-                "label": "Ultima carga viral qualitativa",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "concept": "9db4ce3b-4c1c-45dd-905f-c984a052f26e",
-                  "rendering": "select",
-                  "answers": [
-                    {
-                      "concept": "bce7d965-3396-4667-8294-aa5260c26334",
-                      "label": "3HP"
-                    },
-                    {
-                      "concept": "b7119181-4186-4680-9b9e-8ae01cb40073",
-                      "label": "1HP"
-                    },
-                    {
-                      "concept": "c3e11134-fac6-4577-9f99-a3d42cfbc5d1",
-                      "label": "LFX"
-                    },
-                    {
-                      "concept": "e1d43e52-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "ISONIAZIDA"
-                    }
-                  ]
-                },
-                "id": "ultimoTpt",
-                "label": "Ultimo TPT",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "date",
-                  "concept": "b6c4d473-2af5-4c4d-a9bb-ad3779fa5579"
-                },
-                "id": "tptDataInicio",
-                "label": "Data Inicio",
-                "datePickerFormat": "calendar",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "e1e056a6-1d5f-11e0-b929-000c29ad1d07",
-                  "answers": [
-                    {
-                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Sim"
-                    },
-                    {
-                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Não"
-                    }
-                  ]
-                },
-                "id": "gravidez",
-                "label": "Gestante",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
-              },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "bc4fe755-fc8f-49b8-9956-baf2477e8313",
-                  "answers": [
-                    {
-                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Sim"
-                    },
-                    {
-                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Não"
-                    }
-                  ]
-                },
-                "id": "lactante",
-                "label": "Lactante",
-                "hide": {
-                  "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                }
+              "id": "tomouArvAnteriormente",
+              "label": "Tomou ARVs anteriormente?",
+              "required": false,
+              "hide": {
+                "hideWhenExpression": "alreadyInTarv !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            ]
-          },
-          {
-            "label": " Estadio OMS Inicio TARV",
-            "isExpanded": "true",
-            "questions": [
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "e1e53c02-1d5f-11e0-b929-000c29ad1d07",
-                  "answers": [
-                    {
-                      "concept": "e1d90888-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "ESTADIO IV OMS"
-                    },
-                    {
-                      "concept": "e1d9077a-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "ESTADIO III OMS"
-                    },
-                    {
-                      "concept": "e1d9066c-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "ESTADIO II OMS"
-                    },
-                    {
-                      "concept": "e1d9055e-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "ESTADIO I OMS"
-                    }
-                  ]
-                },
-                "id": "estadioOms",
-                "label": "Estadio OMS"
-              }
-            ]
-          },
-          {
-            "label": "CD4 Inicio de TARV",
-            "isExpanded": "true",
-            "questions": [
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "number",
-                  "concept": "596e9d7c-1a17-4177-b4fb-76341dbee9dd"
-                },
-                "id": "cd4InicioTarv",
-                "label": "CD4 Absoluto Inicio de TARV"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "e1dc3e04-1d5f-11e0-b929-000c29ad1d07",
+                "answers": [
+                  {
+                    "concept": "e1d3d5de-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "NEVIRAPINA"
+                  },
+                  {
+                    "concept": "e1d5d988-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ZIDOVUDINA"
+                  },
+                  {
+                    "concept": "e1d5d438-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "D4T+3TC+NVP"
+                  },
+                  {
+                    "concept": "e1d3d2c8-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "LAMIVUDINA"
+                  },
+                  {
+                    "concept": "e1de9046-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TRATEMENTO ANTIRETROVIRAL"
+                  },
+                  {
+                    "concept": "e1de9140-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ZIDOVUDINA + NEVIRAPINA"
+                  },
+                  {
+                    "concept": "e1d3d4da-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ZIDOVUDINA + LAMIVUDINA"
+                  }
+                ]
               },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "number",
-                  "concept": "bbe65b5a-29b1-4add-8a61-9e7425a7c0f6"
-                },
-                "id": "cd4Percentual",
-                "label": "CD4 Percentual Inicio de TARV"
+              "id": "profilaxiaArvNaCpn",
+              "label": "ARVs",
+              "hide": {
+                "hideWhenExpression": "alreadyInTarv !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "16f3d28e-03d5-467f-841c-ad678e9a4c19",
+                "answers": [
+                  {
+                    "concept": "e1dc0eca-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TRATAMENTO PTV"
+                  },
+                  {
+                    "concept": "cdcf3400-f17b-400b-82be-b22cb4f0ebb7",
+                    "label": "PPE"
+                  },
+                  {
+                    "concept": "c29e5740-8ea5-409e-b322-7414f36e2739",
+                    "label": "PrEP"
+                  },
+                  {
+                    "concept": "39cab1ff-93e7-4a5e-bd42-6f8e6cb39359",
+                    "label": "Outra exposição ao TARV"
+                  }
+                ]
               },
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "rendering": "select",
-                  "concept": "4b878ebf-8e5c-4aa4-bc2a-daeb54c2dcfa",
-                  "answers": [
-                    {
-                      "concept": "e1d9ecf8-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "CD4 SUPERIOR A 200"
-                    },
-                    {
-                      "concept": "9395a2a8-21e9-4e06-bd2f-24c52f56cd21",
-                      "label": "CD4 menor ou igual a 200"
-                    }
-                  ]
-                },
-                "id": "cd4Quantitativo",
-                "label": "CD4 Quantitativo Inicio de TARV",
-                "required": false
+              "id": "arvTomadosAnteriormente",
+              "label": "ARV tomados anteriormente",
+              "hide": {
+                "hideWhenExpression": "alreadyInTarv !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            ]
-          },
-          {
-            "label": "Alternativas a primeira linha",
-            "isExpanded": "true",
-            "questions": [
-              {
-                "type": "obs",
-                "questionOptions": {
-                  "concept": "618650c6-90c3-4acd-ae4d-ffb2f6452a5b",
-                  "rendering": "select",
-                  "answers": [
-                    {
-                      "concept": "e1da2d30-1d5f-11e0-b929-000c29ad1d07",
-                      "label": "ABC+3TC+LPV/r (2ª Linha)"
-                    },
-                    {
-                      "concept": "f808f602-bc43-4070-9390-c2ec3fd0bee2",
-                      "label": "TDF+3TC+LPV/r"
-                    },
-                    {
-                      "concept": "daf60844-9002-403f-bd93-3838149a9a5e",
-                      "label": "ZIDOVUDINA+LAMIVUDINA+LOPINAVIR/RITONAVIR"
-                    }
-                  ]
-                },
-                "id": "novoRegimePrimeiraLinha",
-                "label": "Novo Regime"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "39cab1ff-93e7-4a5e-bd42-6f8e6cb39359"
+              },
+              "id": "outraExposicaoTarv",
+              "label": "Outra exposição ao TARV",
+              "hide": {
+                "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'39cab1ff-93e7-4a5e-bd42-6f8e6cb39359') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            ]
+            }
+          ]
+        },
+        {
+          "label": "PTV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "e3252b52-ea75-449f-acbe-27653afe315c"
+              },
+              "id": "ptvData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "66c0fb92-50f2-4021-a683-f841a17f9a35"
+              },
+              "id": "ptvLocal",
+              "label": "Local"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'e1dc0eca-1d5f-11e0-b929-000c29ad1d07') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "label": "PPE",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "3ee202fc-1882-42c3-8c46-27cfce64a3f4"
+              },
+              "id": "ppeData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "feb55864-cbda-490c-abef-b53486cb58fb"
+              },
+              "id": "ppeLocal",
+              "label": "Local",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'cdcf3400-f17b-400b-82be-b22cb4f0ebb7') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "PrEP",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "f0f52116-dd4b-44be-8ff4-7dc8234b276d"
+              },
+              "id": "prepData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "722ae804-37d0-4fb9-84d7-45a9484d7e03"
+              },
+              "id": "prepLocal",
+              "label": "Local",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'c29e5740-8ea5-409e-b322-7414f36e2739') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Outra exposição ao TARV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c318e565-ec71-4761-a127-2783a6d747c5"
+              },
+              "id": "outraExposicaoData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "f65b5104-003e-485d-8a12-654ba1b62ad3"
+              },
+              "id": "outraExposicaoLocal",
+              "label": "Local",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "!arrayContains(arvTomadosAnteriormente,'39cab1ff-93e7-4a5e-bd42-6f8e6cb39359') || tomouArvAnteriormente !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Último CD4",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "e1dd5ab4-1d5f-11e0-b929-000c29ad1d07",
+                "rendering": "number"
+              },
+              "id": "ultimoCd4Absoluto",
+              "label": "Ultimo CD4 Absoluto"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "e1d48fba-1d5f-11e0-b929-000c29ad1d07",
+                "rendering": "number",
+                "min": "0",
+                "max": "100"
+              },
+              "id": "ultimoCd4Percentual",
+              "label": "Ultimo CD4 Percentual"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "db7f1675-8850-476d-bc09-70be975c0867",
+                "answers": [
+                  {
+                    "concept": "e1d9ecf8-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CD4 SUPERIOR A 200"
+                  },
+                  {
+                    "concept": "9395a2a8-21e9-4e06-bd2f-24c52f56cd21",
+                    "label": "CD4 menor ou igual a 200"
+                  }
+                ]
+              },
+              "id": "ultimoCd4SemiQuantitativo",
+              "label": "Ultimo CD4 Semi-Quantitativo"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "210cf6cc-bf58-420c-9f26-7d636a028b13"
+              },
+              "id": "ultimoCD4Data",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Última Carga Viral",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "e1d6247e-1d5f-11e0-b929-000c29ad1d07"
+              },
+              "id": "ultimaCargaViral",
+              "label": "Última Carga Viral"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "e1da2704-1d5f-11e0-b929-000c29ad1d07",
+                "answers": [
+                  {
+                    "concept": "cc8ef88c-6ab6-4404-a036-d415bc42cc1c",
+                    "label": "CARGA VIRAL INDETECTAVEL"
+                  },
+                  {
+                    "concept": "4df535db-b8c9-4759-85bb-f4bcb5bebdc6",
+                    "label": "MENOR QUE"
+                  }
+                ]
+              },
+              "id": "ultimaCargaViralQualitativa",
+              "label": "Última Carga Viral Qualitativa"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "8f114d47-d2f7-4adb-8b22-42d1560759e7"
+              },
+              "id": "ultimaCargaViralData",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Último TPT",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "9db4ce3b-4c1c-45dd-905f-c984a052f26e",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "bce7d965-3396-4667-8294-aa5260c26334",
+                    "label": "3HP"
+                  },
+                  {
+                    "concept": "b7119181-4186-4680-9b9e-8ae01cb40073",
+                    "label": "1HP"
+                  },
+                  {
+                    "concept": "c3e11134-fac6-4577-9f99-a3d42cfbc5d1",
+                    "label": "LFX"
+                  },
+                  {
+                    "concept": "e1d43e52-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ISONIAZIDA"
+                  }
+                ]
+              },
+              "id": "ultimoTpt",
+              "label": "Ultimo TPT"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "b6c4d473-2af5-4c4d-a9bb-ad3779fa5579",
+                "answers": [
+                  {
+                    "concept": "e1d9ef28-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "INICIAR"
+                  }
+                ]
+              },
+              "id": "estadoInicioTPT",
+              "label": "Estado"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "10309db3-5b1b-41dd-91f2-ab8f6ff64f38"
+              },
+              "id": "estadoDataInicioTPT",
+              "label": "Data Inicio",
+              "datePickerFormat": "calendar",
+              "required": true,
+              "hide": {
+                "hideWhenExpression": "estadoInicioTPT != 'e1d9ef28-1d5f-11e0-b929-000c29ad1d07'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "b6c4d473-2af5-4c4d-a9bb-ad3779fa5579",
+                "answers": [
+                  {
+                    "concept": "e1d9facc-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "COMPLETO"
+                  }
+                ]
+              },
+              "id": "estadoFimTPT",
+              "label": "Estado"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "7e2f7722-c256-4e1b-a225-7244a4cb4878"
+              },
+              "id": "estadoDataFimTPTDuplicate",
+              "label": "Data Fim",
+              "datePickerFormat": "calendar",
+              "required": true,
+              "hide": {
+                "hideWhenExpression": "estadoFimTPT != 'e1d9facc-1d5f-11e0-b929-000c29ad1d07'"
+              }
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "No Início do TARV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "e1d8f690-1d5f-11e0-b929-000c29ad1d07"
+              },
+              "id": "dataInicioTarv",
+              "label": "Data de inicio TARV",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "760180a9-bcf0-4820-8771-d57d73d1f68d",
+                "rendering": "text"
+              },
+              "id": "unidadeSanitariaInicioTarv",
+              "label": "Unidade Sanitária"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "62cd383d-165d-4b2a-96c1-a557d5c2bb6f",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "f32e013c-38c8-483a-8012-88596e8b13da",
+                    "label": "3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "e8b741b3-463c-46b1-8423-a16f736af8d4",
+                    "label": "ABC+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "7d18d08c-d1a8-4dc8-8d65-02197b42acf7",
+                    "label": "ABC+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "552dd71f-d1de-426a-a19c-49b8706a4a7f",
+                    "label": "ABC+3TC+DRV/r+RAL"
+                  },
+                  {
+                    "concept": "af15246d-30b8-4aff-8391-ca2b58e2c88b",
+                    "label": "ABC+3TC+DTG"
+                  },
+                  {
+                    "concept": "6001b912-dd69-4331-ace1-899867f7015c",
+                    "label": "ABC+3TC+DTG (2ª Linha)"
+                  },
+                  {
+                    "concept": "78419317-cdda-42e9-92a3-13cb0cbf0020",
+                    "label": "ABC+3TC+EFV"
+                  },
+                  {
+                    "concept": "e1da2f42-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ABC+3TC+EFV (2ª Linha)"
+                  },
+                  {
+                    "concept": "cf05347e-063c-4896-91a4-097741cf6be6",
+                    "label": "ABC+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e1da2d30-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ABC+3TC+LPV/r (2ª Linha)"
+                  },
+                  {
+                    "concept": "e11be52e-0da1-4d32-ab5c-e0feb9b6abd6",
+                    "label": "ABC+3TC+NVP"
+                  },
+                  {
+                    "concept": "ba25f2b5-4216-4605-9e6b-1f591033dc3e",
+                    "label": "AZT+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "8f9c4e58-0d70-4b09-a109-e776d325e9fd",
+                    "label": "AZT+3TC+DRV/r"
+                  },
+                  {
+                    "concept": "9cb63f72-4c08-4543-878a-537dcabe5670",
+                    "label": "AZT+3TC+DTG"
+                  },
+                  {
+                    "concept": "e1de19fe-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+EFV"
+                  },
+                  {
+                    "concept": "28b28521-b6cd-454e-9ec5-f2c6c9c58468",
+                    "label": "AZT+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e1da3046-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+LPV/r (2ª Linha)"
+                  },
+                  {
+                    "concept": "e1dd2f44-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+NVP"
+                  },
+                  {
+                    "concept": "c4a56680-ac6e-4538-8126-e3097b7b4789",
+                    "label": "AZT+3TC+RAL"
+                  },
+                  {
+                    "concept": "c30f826d-9433-4e63-ac91-dbbc158686ff",
+                    "label": "AZT+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "7bf5a88d-6db6-4899-a01a-bfd14ce77b53",
+                    "label": "TDF+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "c22c4431-a27e-4054-92bb-a1563482003e",
+                    "label": "TDF+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "e3f6bb60-e2cf-46cb-a9da-27d634ba8607",
+                    "label": "TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "e8341e56-eaf2-4530-8773-8fe05b400b5a",
+                    "label": "TDF+3TC+DTG (2ª Linha)"
+                  },
+                  {
+                    "concept": "9dc17c1b-7b6d-488e-a38d-505a7b65ec82",
+                    "label": "TDF+3TC+EFV"
+                  },
+                  {
+                    "concept": "f8c5d365-7636-4449-9acd-c83c4fd2ea01",
+                    "label": "TDF+3TC+LPV/r (2ª LINHA)"
+                  },
+                  {
+                    "concept": "d5f9d629-67bc-4f60-9e12-629e6d2c1d08",
+                    "label": "TDF+3TC+LPV/r+RTV"
+                  },
+                  {
+                    "concept": "2e44e77e-eac4-4f64-84d2-73d32abf94d5",
+                    "label": "TDF+3TC+NVP"
+                  },
+                  {
+                    "concept": "46b8a2ab-36a7-4072-ab62-0af9b3b58e72",
+                    "label": "TDF+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "f42849f8-8c0a-4dcb-a589-792a9ea8b2ce",
+                    "label": "ATV/r+TDF+3TC+DTG"
+                  }
+                ]
+              },
+              "id": "regimeArvInicalLinha1",
+              "label": "Regime ARV inicial de 1ª Linha"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Gravidez",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "e1e056a6-1d5f-11e0-b929-000c29ad1d07",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  }
+                ]
+              },
+              "id": "gravidez",
+              "label": "Gravidez"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "bc4fe755-fc8f-49b8-9956-baf2477e8313",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  }
+                ]
+              },
+              "id": "lactante",
+              "label": "Lactante"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !== 'F'"
+          }
+        },
+        {
+          "label": " Estadio OMS Inicio TARV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "e1e53c02-1d5f-11e0-b929-000c29ad1d07",
+                "answers": [
+                  {
+                    "concept": "e1d90888-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ESTADIO IV OMS"
+                  },
+                  {
+                    "concept": "e1d9077a-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ESTADIO III OMS"
+                  },
+                  {
+                    "concept": "e1d9066c-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ESTADIO II OMS"
+                  },
+                  {
+                    "concept": "e1d9055e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ESTADIO I OMS"
+                  }
+                ]
+              },
+              "id": "estadioOms",
+              "label": "Estadio OMS"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "CD4 Inicio de TARV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "596e9d7c-1a17-4177-b4fb-76341dbee9dd"
+              },
+              "id": "cd4InicioTarv",
+              "label": "CD4 Absoluto Inicio de TARV"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "bbe65b5a-29b1-4add-8a61-9e7425a7c0f6"
+              },
+              "id": "cd4Percentual",
+              "label": "CD4 Percentual Inicio de TARV"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "4b878ebf-8e5c-4aa4-bc2a-daeb54c2dcfa",
+                "answers": [
+                  {
+                    "concept": "e1d9ecf8-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CD4 SUPERIOR A 200"
+                  },
+                  {
+                    "concept": "9395a2a8-21e9-4e06-bd2f-24c52f56cd21",
+                    "label": "CD4 menor ou igual a 200"
+                  }
+                ]
+              },
+              "id": "cd4Quantitativo",
+              "label": "CD4 Quantitativo Inicio de TARV",
+              "required": false
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Alternativas a - 1ª Linha",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "618650c6-90c3-4acd-ae4d-ffb2f6452a5b",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "e1de19fe-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+EFV"
+                  },
+                  {
+                    "concept": "28b28521-b6cd-454e-9ec5-f2c6c9c58468",
+                    "label": "AZT+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e1dd2f44-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+NVP"
+                  },
+                  {
+                    "concept": "9dc17c1b-7b6d-488e-a38d-505a7b65ec82",
+                    "label": "TDF+3TC+EFV"
+                  },
+                  {
+                    "concept": "2e44e77e-eac4-4f64-84d2-73d32abf94d5",
+                    "label": "TDF+3TC+NVP"
+                  },
+                  {
+                    "concept": "78419317-cdda-42e9-92a3-13cb0cbf0020",
+                    "label": "ABC+3TC+EFV"
+                  },
+                  {
+                    "concept": "e3f6bb60-e2cf-46cb-a9da-27d634ba8607",
+                    "label": "TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "af15246d-30b8-4aff-8391-ca2b58e2c88b",
+                    "label": "ABC+3TC+DTG"
+                  },
+                  {
+                    "concept": "3e7f46c7-a971-4c0c-82aa-a65589fd518e",
+                    "label": "AZT+3TC+ABC"
+                  },
+                  {
+                    "concept": "cf05347e-063c-4896-91a4-097741cf6be6",
+                    "label": "ABC+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e11be52e-0da1-4d32-ab5c-e0feb9b6abd6",
+                    "label": "ABC+3TC+NVP"
+                  },
+                  {
+                    "concept": "f808f602-bc43-4070-9390-c2ec3fd0bee2",
+                    "label": "TDF+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "d5f9d629-67bc-4f60-9e12-629e6d2c1d08",
+                    "label": "TDF+3TC+LPV/r+RTV"
+                  },
+                  {
+                    "concept": "7bf5a88d-6db6-4899-a01a-bfd14ce77b53",
+                    "label": "TDF+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "e8b741b3-463c-46b1-8423-a16f736af8d4",
+                    "label": "ABC+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "ba25f2b5-4216-4605-9e6b-1f591033dc3e",
+                    "label": "AZT+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "7d18d08c-d1a8-4dc8-8d65-02197b42acf7",
+                    "label": "ABC+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "c22c4431-a27e-4054-92bb-a1563482003e",
+                    "label": "TDF+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "c4a56680-ac6e-4538-8126-e3097b7b4789",
+                    "label": "AZT+3TC+RAL"
+                  },
+                  {
+                    "concept": "8f9c4e58-0d70-4b09-a109-e776d325e9fd",
+                    "label": "AZT+3TC+DRV/r"
+                  },
+                  {
+                    "concept": "9cb63f72-4c08-4543-878a-537dcabe5670",
+                    "label": "AZT+3TC+DTG"
+                  },
+                  {
+                    "concept": "46b8a2ab-36a7-4072-ab62-0af9b3b58e72",
+                    "label": "TDF+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "552dd71f-d1de-426a-a19c-49b8706a4a7f",
+                    "label": "ABC+3TC+DRV/r+RAL"
+                  },
+                  {
+                    "concept": "f32e013c-38c8-483a-8012-88596e8b13da",
+                    "label": "3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "c30f826d-9433-4e63-ac91-dbbc158686ff",
+                    "label": "AZT+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "f42849f8-8c0a-4dcb-a589-792a9ea8b2ce",
+                    "label": "ATV/r+TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "e1e59e0e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "OUTRO MEDICAMENTO ANTI-RETROVIRAL"
+                  }
+                ]
+              },
+              "id": "novoRegimePrimeiraLinha",
+              "label": "Novo Regime"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "6e0c36b7-a6c8-4c35-a01d-0a410f82c833"
+              },
+              "id": "dataRegimeLinha1",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "e1de8862-1d5f-11e0-b929-000c29ad1d07",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "e1cf3b32-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TOXICIDADE, COMPRIMIDO"
+                  },
+                  {
+                    "concept": "e1e056a6-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "GESTANTE"
+                  },
+                  {
+                    "concept": "e1da79ca-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "RISCO DE VIDA DE GRAVIDADE"
+                  },
+                  {
+                    "concept": "e1d85906-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "DATA DE INICIO DO TRATAMENTO TB"
+                  },
+                  {
+                    "concept": "5f65b955-b575-40bd-865b-7baf4ed70337",
+                    "label": "NOVO MEDICAMENTO DISPONIVEL"
+                  },
+                  {
+                    "concept": "a1193908-4434-4d5a-a4b8-ab68efbceb34",
+                    "label": "RUPTURA DE ESTOCK DE ARV"
+                  },
+                  {
+                    "concept": "e1de866e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "FALTA TERAPUTICA CLINICA"
+                  },
+                  {
+                    "concept": "e1de8768-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "FALHA TERAPUTICA LABROTORIAL"
+                  },
+                  {
+                    "concept": "f5f837f1-9aa3-4b4e-be80-a3ddd6d68418",
+                    "label": "FALENCIA VIROLOGICA"
+                  }
+                ]
+              },
+              "id": "motivoRegimeLinha1",
+              "label": "Motivo"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Alternativas a - 2ª Linha",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "618650c6-90c3-4acd-ae4d-ffb2f6452a5b",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "e1de19fe-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+EFV"
+                  },
+                  {
+                    "concept": "28b28521-b6cd-454e-9ec5-f2c6c9c58468",
+                    "label": "AZT+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e1dd2f44-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+NVP"
+                  },
+                  {
+                    "concept": "9dc17c1b-7b6d-488e-a38d-505a7b65ec82",
+                    "label": "TDF+3TC+EFV"
+                  },
+                  {
+                    "concept": "2e44e77e-eac4-4f64-84d2-73d32abf94d5",
+                    "label": "TDF+3TC+NVP"
+                  },
+                  {
+                    "concept": "78419317-cdda-42e9-92a3-13cb0cbf0020",
+                    "label": "ABC+3TC+EFV"
+                  },
+                  {
+                    "concept": "e3f6bb60-e2cf-46cb-a9da-27d634ba8607",
+                    "label": "TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "af15246d-30b8-4aff-8391-ca2b58e2c88b",
+                    "label": "ABC+3TC+DTG"
+                  },
+                  {
+                    "concept": "3e7f46c7-a971-4c0c-82aa-a65589fd518e",
+                    "label": "AZT+3TC+ABC"
+                  },
+                  {
+                    "concept": "cf05347e-063c-4896-91a4-097741cf6be6",
+                    "label": "ABC+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e11be52e-0da1-4d32-ab5c-e0feb9b6abd6",
+                    "label": "ABC+3TC+NVP"
+                  },
+                  {
+                    "concept": "f808f602-bc43-4070-9390-c2ec3fd0bee2",
+                    "label": "TDF+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "d5f9d629-67bc-4f60-9e12-629e6d2c1d08",
+                    "label": "TDF+3TC+LPV/r+RTV"
+                  },
+                  {
+                    "concept": "7bf5a88d-6db6-4899-a01a-bfd14ce77b53",
+                    "label": "TDF+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "e8b741b3-463c-46b1-8423-a16f736af8d4",
+                    "label": "ABC+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "ba25f2b5-4216-4605-9e6b-1f591033dc3e",
+                    "label": "AZT+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "7d18d08c-d1a8-4dc8-8d65-02197b42acf7",
+                    "label": "ABC+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "c22c4431-a27e-4054-92bb-a1563482003e",
+                    "label": "TDF+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "c4a56680-ac6e-4538-8126-e3097b7b4789",
+                    "label": "AZT+3TC+RAL"
+                  },
+                  {
+                    "concept": "8f9c4e58-0d70-4b09-a109-e776d325e9fd",
+                    "label": "AZT+3TC+DRV/r"
+                  },
+                  {
+                    "concept": "9cb63f72-4c08-4543-878a-537dcabe5670",
+                    "label": "AZT+3TC+DTG"
+                  },
+                  {
+                    "concept": "46b8a2ab-36a7-4072-ab62-0af9b3b58e72",
+                    "label": "TDF+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "552dd71f-d1de-426a-a19c-49b8706a4a7f",
+                    "label": "ABC+3TC+DRV/r+RAL"
+                  },
+                  {
+                    "concept": "f32e013c-38c8-483a-8012-88596e8b13da",
+                    "label": "3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "c30f826d-9433-4e63-ac91-dbbc158686ff",
+                    "label": "AZT+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "f42849f8-8c0a-4dcb-a589-792a9ea8b2ce",
+                    "label": "ATV/r+TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "e1e59e0e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "OUTRO MEDICAMENTO ANTI-RETROVIRAL"
+                  }
+                ]
+              },
+              "id": "novoRegimePrimeiraLinha",
+              "label": "Novo Regime"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "6e0c36b7-a6c8-4c35-a01d-0a410f82c833"
+              },
+              "id": "dataRegimeLinha2",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "e1de8862-1d5f-11e0-b929-000c29ad1d07",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "e1cf3b32-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TOXICIDADE, COMPRIMIDO"
+                  },
+                  {
+                    "concept": "e1e056a6-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "GESTANTE"
+                  },
+                  {
+                    "concept": "e1da79ca-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "RISCO DE VIDA DE GRAVIDADE"
+                  },
+                  {
+                    "concept": "e1d85906-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "DATA DE INICIO DO TRATAMENTO TB"
+                  },
+                  {
+                    "concept": "5f65b955-b575-40bd-865b-7baf4ed70337",
+                    "label": "NOVO MEDICAMENTO DISPONIVEL"
+                  },
+                  {
+                    "concept": "a1193908-4434-4d5a-a4b8-ab68efbceb34",
+                    "label": "RUPTURA DE ESTOCK DE ARV"
+                  },
+                  {
+                    "concept": "e1de866e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "FALTA TERAPUTICA CLINICA"
+                  },
+                  {
+                    "concept": "e1de8768-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "FALHA TERAPUTICA LABROTORIAL"
+                  },
+                  {
+                    "concept": "f5f837f1-9aa3-4b4e-be80-a3ddd6d68418",
+                    "label": "FALENCIA VIROLOGICA"
+                  }
+                ]
+              },
+              "id": "motivoRegimeLinha1",
+              "label": "Motivo"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Alternativas a - 3ª Linha",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "618650c6-90c3-4acd-ae4d-ffb2f6452a5b",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "e1de19fe-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+EFV"
+                  },
+                  {
+                    "concept": "28b28521-b6cd-454e-9ec5-f2c6c9c58468",
+                    "label": "AZT+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e1dd2f44-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AZT+3TC+NVP"
+                  },
+                  {
+                    "concept": "9dc17c1b-7b6d-488e-a38d-505a7b65ec82",
+                    "label": "TDF+3TC+EFV"
+                  },
+                  {
+                    "concept": "2e44e77e-eac4-4f64-84d2-73d32abf94d5",
+                    "label": "TDF+3TC+NVP"
+                  },
+                  {
+                    "concept": "78419317-cdda-42e9-92a3-13cb0cbf0020",
+                    "label": "ABC+3TC+EFV"
+                  },
+                  {
+                    "concept": "e3f6bb60-e2cf-46cb-a9da-27d634ba8607",
+                    "label": "TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "af15246d-30b8-4aff-8391-ca2b58e2c88b",
+                    "label": "ABC+3TC+DTG"
+                  },
+                  {
+                    "concept": "3e7f46c7-a971-4c0c-82aa-a65589fd518e",
+                    "label": "AZT+3TC+ABC"
+                  },
+                  {
+                    "concept": "cf05347e-063c-4896-91a4-097741cf6be6",
+                    "label": "ABC+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "e11be52e-0da1-4d32-ab5c-e0feb9b6abd6",
+                    "label": "ABC+3TC+NVP"
+                  },
+                  {
+                    "concept": "f808f602-bc43-4070-9390-c2ec3fd0bee2",
+                    "label": "TDF+3TC+LPV/r"
+                  },
+                  {
+                    "concept": "d5f9d629-67bc-4f60-9e12-629e6d2c1d08",
+                    "label": "TDF+3TC+LPV/r+RTV"
+                  },
+                  {
+                    "concept": "7bf5a88d-6db6-4899-a01a-bfd14ce77b53",
+                    "label": "TDF+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "e8b741b3-463c-46b1-8423-a16f736af8d4",
+                    "label": "ABC+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "ba25f2b5-4216-4605-9e6b-1f591033dc3e",
+                    "label": "AZT+3TC+ATV/r"
+                  },
+                  {
+                    "concept": "7d18d08c-d1a8-4dc8-8d65-02197b42acf7",
+                    "label": "ABC+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "c22c4431-a27e-4054-92bb-a1563482003e",
+                    "label": "TDF+3TC+ATV/r+RAL"
+                  },
+                  {
+                    "concept": "c4a56680-ac6e-4538-8126-e3097b7b4789",
+                    "label": "AZT+3TC+RAL"
+                  },
+                  {
+                    "concept": "8f9c4e58-0d70-4b09-a109-e776d325e9fd",
+                    "label": "AZT+3TC+DRV/r"
+                  },
+                  {
+                    "concept": "9cb63f72-4c08-4543-878a-537dcabe5670",
+                    "label": "AZT+3TC+DTG"
+                  },
+                  {
+                    "concept": "46b8a2ab-36a7-4072-ab62-0af9b3b58e72",
+                    "label": "TDF+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "552dd71f-d1de-426a-a19c-49b8706a4a7f",
+                    "label": "ABC+3TC+DRV/r+RAL"
+                  },
+                  {
+                    "concept": "f32e013c-38c8-483a-8012-88596e8b13da",
+                    "label": "3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "c30f826d-9433-4e63-ac91-dbbc158686ff",
+                    "label": "AZT+3TC+RAL+DRV/r"
+                  },
+                  {
+                    "concept": "f42849f8-8c0a-4dcb-a589-792a9ea8b2ce",
+                    "label": "ATV/r+TDF+3TC+DTG"
+                  },
+                  {
+                    "concept": "e1e59e0e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "OUTRO MEDICAMENTO ANTI-RETROVIRAL"
+                  }
+                ]
+              },
+              "id": "novoRegimePrimeiraLinha",
+              "label": "Novo Regime"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "6e0c36b7-a6c8-4c35-a01d-0a410f82c833"
+              },
+              "id": "dataRegimeLinha3",
+              "label": "Data",
+              "datePickerFormat": "calendar"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "e1de8862-1d5f-11e0-b929-000c29ad1d07",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "e1cf3b32-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TOXICIDADE, COMPRIMIDO"
+                  },
+                  {
+                    "concept": "e1e056a6-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "GESTANTE"
+                  },
+                  {
+                    "concept": "e1da79ca-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "RISCO DE VIDA DE GRAVIDADE"
+                  },
+                  {
+                    "concept": "e1d85906-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "DATA DE INICIO DO TRATAMENTO TB"
+                  },
+                  {
+                    "concept": "5f65b955-b575-40bd-865b-7baf4ed70337",
+                    "label": "NOVO MEDICAMENTO DISPONIVEL"
+                  },
+                  {
+                    "concept": "a1193908-4434-4d5a-a4b8-ab68efbceb34",
+                    "label": "RUPTURA DE ESTOCK DE ARV"
+                  },
+                  {
+                    "concept": "e1de866e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "FALTA TERAPUTICA CLINICA"
+                  },
+                  {
+                    "concept": "e1de8768-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "FALHA TERAPUTICA LABROTORIAL"
+                  },
+                  {
+                    "concept": "f5f837f1-9aa3-4b4e-be80-a3ddd6d68418",
+                    "label": "FALENCIA VIROLOGICA"
+                  }
+                ]
+              },
+              "id": "motivoRegimeLinha1",
+              "label": "Motivo"
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "alreadyInTarv !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        }
+      ]
+    }
+  ]
+}

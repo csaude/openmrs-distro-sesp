@@ -1,0 +1,393 @@
+{
+  "name": "Situação Familiar",
+  "processor": "EncounterFormProcessor",
+  "encounter": "Master Card - Ficha Resumo",
+  "referencedForms": [],
+  "published": true,
+  "retired": false,
+  "description": "Situação Familiar - Consulta de admissao",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Situação Familiar ",
+      "sections": [
+        {
+          "label": "Origem do CI",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "6489bdef-2bf1-40a7-bc15-408796bb88f6",
+                "answers": [
+                  {
+                    "concept": "e1dca5e2-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "ACONSELHAMENTO E TESTAGEM DE SAUDE"
+                  },
+                  {
+                    "concept": "e1e67fcc-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "SERVICOS DE PLANEAMENTO FAMILIAR"
+                  },
+                  {
+                    "concept": "6b7a4865-e493-46cf-a30e-ba0419561836",
+                    "label": "Enfermaria de Medicina"
+                  },
+                  {
+                    "concept": "e8adc3d0-7300-4404-b3d4-daf10190f1fb",
+                    "label": "Enfermaria de Pediatria"
+                  },
+                  {
+                    "concept": "1b7ff519-1ec3-4b6d-aeae-6f6381b70a62",
+                    "label": "TRIAGEM - ADULTOS"
+                  },
+                  {
+                    "concept": "053018d5-7e95-42fb-80fc-b1347a60cd18",
+                    "label": "TRIAGEM - PEDIATRIA"
+                  },
+                  {
+                    "concept": "49de039c-b3a2-4f31-b89d-dd6ba03dd3fc",
+                    "label": "Triagem - Banco de Socorros"
+                  },
+                  {
+                    "concept": "97643e82-ea91-41f8-9d2d-2ed9bc96da61",
+                    "label": "Banco de Socorro"
+                  },
+                  {
+                    "concept": "fb91b970-3ad9-4206-b59a-08ca4eabf518",
+                    "label": "Estomatologia"
+                  },
+                  {
+                    "concept": "e1dca4e8-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CONSULTA EXTERNA"
+                  },
+                  {
+                    "concept": "e1e05bc4-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "GATV/SAAJ"
+                  },
+                  {
+                    "concept": "8050ba5b-2e45-4739-a02c-019d91791569",
+                    "label": "Consulta Pós-Parto"
+                  },
+                  {
+                    "concept": "e1e052aa-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CONSULTA PRE-NATAL"
+                  },
+                  {
+                    "concept": "e1dee38e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CONSULTA DE CRIANCAS EM RISCO"
+                  },
+                  {
+                    "concept": "e1de7e58-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "PROGRAMA NACIONAL CONTRA TUBERCULOSE E LEPRA"
+                  },
+                  {
+                    "concept": "1facbb34-9b76-4e81-95e1-bd38fd6cb477",
+                    "label": "Maternidade"
+                  },
+                  {
+                    "concept": "e698e56c-a12f-4660-9d94-2ef48abbc9ec",
+                    "label": "CCS"
+                  },
+                  {
+                    "concept": "e1e0a8cc-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "APOIO PSICOLOGICO INDIVIDUAL"
+                  },
+                  {
+                    "concept": "0b639730-70ae-44b8-a90f-c24ce7af31e4",
+                    "label": "BRIGADAS MOVEIS (DCBM)"
+                  },
+                  {
+                    "concept": "e1daca74-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CLINICA MOVEL"
+                  },
+                  {
+                    "concept": "be53ec04-d2ae-485e-9a6c-e167deef9a95",
+                    "label": "SERVICO TARV - TRATAMENTO"
+                  },
+                  {
+                    "concept": "adfe6645-9165-483e-a022-4c443de1344a",
+                    "label": "ATENDIMENTO POR INICIATIVA DO PROVEDOR"
+                  }
+                ]
+              },
+              "id": "origemDoCI",
+              "label": "Origem do CI"
+            }
+          ]
+        },
+        {
+          "label": "Situação Familiar",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "58849bca-141e-4f6c-aaff-509b1efa99ec"
+              },
+              "id": "nome",
+              "label": "Nome"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "dbf852ab-697f-4c92-a546-74e5301de419",
+                "answers": [
+                  {
+                    "concept": "e1e01c9a-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AMIGO OU COLEGA"
+                  },
+                  {
+                    "concept": "e1d6f264-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "AVO"
+                  },
+                  {
+                    "concept": "e1e09bf2-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "CHEFE DE  BAIRRO"
+                  },
+                  {
+                    "concept": "a45237a4-9d90-460b-ad8f-ea81a048bfa9",
+                    "label": "FILHO"
+                  },
+                  {
+                    "concept": "e1d6f16a-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "IRMAO"
+                  },
+                  {
+                    "concept": "e1d6ef76-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "MAE"
+                  },
+                  {
+                    "concept": "be234c58-760f-471d-80c0-ce1217bcc31b",
+                    "label": "NETO"
+                  },
+                  {
+                    "concept": "e1d6f070-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "PAI"
+                  },
+                  {
+                    "concept": "e1df78b2-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "PARCEIRO"
+                  },
+                  {
+                    "concept": "a3594c0a-9e24-42be-a732-1a277ebd3951",
+                    "label": "PRIMO"
+                  },
+                  {
+                    "concept": "e1d7aa9c-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TIA"
+                  },
+                  {
+                    "concept": "173580ba-859c-42cc-8d74-3a46564c8a0f",
+                    "label": "TRABALHADOR"
+                  },
+                  {
+                    "concept": "e1e09832-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "VIZINHO"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OUTRO, NAO CODIFICADO"
+                  }
+                ]
+              },
+              "id": "parentesco",
+              "label": "Parentesco"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "outroGraoDeParentesco",
+              "label": "Outro"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "695d79ba-97d1-4d6d-bfe7-25dcb650a568"
+              },
+              "id": "idade",
+              "label": "Idade"
+            }
+          ]
+        },
+        {
+          "label": "Teste  HIV",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "42a90771-4d00-44ec-b637-d704025855ba",
+                "answers": [
+                  {
+                    "concept": "e1d47386-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "POSITIVO"
+                  },
+                  {
+                    "concept": "e1d446cc-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "NEGATIVO"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  },
+                  {
+                    "concept": "7f3af436-5c3a-447c-9012-42bb314e03db",
+                    "label": "TARV"
+                  },
+                  {
+                    "concept": "44f812e8-c4c0-40cd-aef3-6b1ef76d43e1",
+                    "label": "PRE-TARV"
+                  },
+                  {
+                    "concept": "e1da766e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "OBITOU"
+                  }
+                ]
+              },
+              "id": "testeHiv",
+              "label": "Teste HIV"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "541d20ec-96d8-4705-ba7d-2df81cfff751",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  }
+                ]
+              },
+              "id": "cuidadosHIV",
+              "label": "Cuidados  HIV"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "e1def0cc-1d5f-11e0-b929-000c29ad1d07",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  },
+                  {
+                    "concept": "f3c00a5c-d251-43d0-864e-8897f5556417",
+                    "label": "Alta"
+                  }
+                ]
+              },
+              "id": "emCCR",
+              "label": "Em CCR"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "59177ab6-a2db-4c20-a1c6-bb5c7c13cad4"
+              },
+              "id": "nid",
+              "label": "NID"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c87a90fd-663d-46b4-b67c-b6733a9f27dd",
+                "answers": [
+                  {
+                    "concept": "bdca9223-527b-46f7-8fb8-0288a58c83f1",
+                    "label": "UNIDADE SANITARIA"
+                  },
+                  {
+                    "concept": "e1df79b6-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "COMUNIDADE"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  }
+                ]
+              },
+              "id": "pacienteConsenteTestagemDosContactos",
+              "label": "Paciente Consente Testagem dos Contactos"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "6d6b3f98-4038-4a08-889c-51a7c4079e11",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Não"
+                  }
+                ]
+              },
+              "id": "pacienteConsenteserTelefonadoPorPessoalDeSaude",
+              "label": "Paciente Consente ser telefonado por pessoal de Saúde"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "e3f3bcea-9e2f-4aec-976f-0290bdbfffb8"
+              },
+              "id": "dataPrevistadaTestagem",
+              "label": "Data Prevista da Testagem",
+              "datePickerFormat": "calendar"
+            }
+          ]
+        },
+        {
+          "label": " ",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "encounterProvider",
+              "questionOptions": {
+                "rendering": "ui-select-extended",
+                "isSearchable": false
+              },
+              "id": "nomeDoProvedor",
+              "label": "Nome do Provedor"
+            },
+            {
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "id": "dataDeRastreioFamiliar",
+              "label": "Data de Rastreio Familiar"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

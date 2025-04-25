@@ -1,0 +1,106 @@
+{
+  "name": "Testagem HIV - Consulta de Admissao",
+  "processor": "EncounterFormProcessor",
+  "encounter": "Master Card - Ficha Resumo",
+  "referencedForms": [],
+  "published": true,
+  "retired": false,
+  "description": "Testagem HIV - Consulta de Admissao",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Teste HIV +",
+      "sections": [
+        {
+          "label": "Teste HIV +",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c7ac119c-d59d-474d-8334-0c5bdd2e9863",
+                "answers": [
+                  {
+                    "concept": "e1d800dc-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "TESTE RÁPIDO HIV"
+                  },
+                  {
+                    "concept": "e1d7f61e-1d5f-11e0-b929-000c29ad1d07",
+                    "label": "PCR EXAME/TESTE"
+                  }
+                ]
+              },
+              "id": "testeHIV",
+              "label": "Teste HIV +"
+            },
+            {
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "id": "dataDoTeste",
+              "label": "Data"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "concept": "602d1865-4689-4b5b-84ff-092b51e7840c",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "bdca9223-527b-46f7-8fb8-0288a58c83f1",
+                    "label": "UNIDADE SANITARIA"
+                  },
+                  {
+                    "concept": "cf6e0b75-d0b4-403a-a886-0c06e1e9ea77",
+                    "label": "ATSC"
+                  }
+                ]
+              },
+              "id": "localDeTestagemDeHIV ",
+              "label": "Local de Testagem de HIV"
+            },
+            {
+              "type": "control",
+              "questionOptions": {
+                "rendering": "text"
+              },
+              "id": "designacao",
+              "label": "Designação"
+            }
+          ]
+        },
+        {
+          "label": " Diagnóstico presuntivo em crianças",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "b792c72c-eaf4-4386-b4a5-8f79c9a83746",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sim"
+                  }
+                ]
+              },
+              "id": "diagnosticoPresuntivoEmCriançasMenoresDe18Meses",
+              "label": "Diagnóstico presuntivo em crianças < 18 meses"
+            },
+            {
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "id": "dataDoDiagnosticoPresumitivo",
+              "label": "Data"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
