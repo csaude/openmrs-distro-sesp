@@ -27,7 +27,7 @@
                   },
                   {
                     "concept": "e1d7f61e-1d5f-11e0-b929-000c29ad1d07",
-                    "label": "PCR EXAME/TESTE"
+                    "label": "PCR"
                   }
                 ]
               },
@@ -35,12 +35,14 @@
               "label": "Teste HIV +"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "54b65bbd-a0b0-4dfa-a3b1-de14d41bc314"
               },
               "id": "dataDoTeste",
-              "label": "Data"
+              "label": "Data",
+              "datePickerFormat": "calendar"
             },
             {
               "type": "obs",
@@ -91,14 +93,23 @@
               "label": "Diagnóstico presuntivo em crianças < 18 meses"
             },
             {
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "concept": "902ebb38-0e07-46a9-808a-4e340d354a15"
               },
               "id": "dataDoDiagnosticoPresumitivo",
-              "label": "Data"
+              "label": "Data",
+              "datePickerFormat": "calendar",
+              "required": true,
+              "hide": {
+                "hideWhenExpression": "diagnosticoPresuntivoEmCriançasMenoresDe18Meses != '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
-          ]
+          ],
+          "hide": {
+            "hideWhenExpression": "age > 1"
+          }
         }
       ]
     }
