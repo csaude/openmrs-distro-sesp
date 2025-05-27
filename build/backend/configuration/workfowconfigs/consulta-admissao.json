@@ -1,36 +1,37 @@
 {
   "name": "Consulta de Admissão",
+  "syncPatient": true,
   "criteria": [
     {
       "criteriaType": "PATIENT_DEMOGRAPHICS",
-      "condition": "age > 12"
+      "condition": "age > 0"
     }
   ],
-  "description": "Wizard da Consulta de Admissão",
+  "description": "Flow da Consulta de Admissão",
   "published": true,
   "version": "1.0",
   "steps": [
     {
-      "id": "step-0",
+      "id": "step-confidente",
       "title": "Confidente",
       "renderType": "form",
       "formId": "4b3ead90-25d4-4968-9105-b1b2a0f67059"
     },
     {
-      "id": "step-1",
+      "id": "step-testagem-hiv",
       "title": "Testagem HIV",
       "renderType": "form",
       "formId": "15006380-8a12-4ad4-84da-0aa20d6f6df4"
     },
     {
-      "id": "step-2",
+      "id": "step-situacao-familiar",
       "title": "Situação Familiar",
       "renderType": "form",
       "formId": "d53ba516-5fa4-415d-be11-dfaf2a7d364f"
     },
     {
-      "id": "step-3",
-      "title": "Situacao TARV",
+      "id": "step-situacao-tarv",
+      "title": "Situação TARV",
       "renderType": "form",
       "formId": "2a538405-418c-4396-b860-58abc081be07"
     }

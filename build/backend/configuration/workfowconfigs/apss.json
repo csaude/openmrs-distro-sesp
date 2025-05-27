@@ -1,0 +1,58 @@
+{
+  "name": "APSS",
+  "criteria": [
+    {
+      "criteriaType": "PATIENT_DEMOGRAPHICS",
+      "condition": "age > 0"
+    }
+  ],
+  "description": "Flow para consulta de APSS",
+  "published": true,
+  "version": "1.0",
+  "steps": [
+    {
+      "id": "step-alergias-a-medicamentos",
+      "title": "Alergias a medicamentos",
+      "renderType": "allergies",
+      "skippable": true,
+      "initiallyOpen": true
+    },
+    {
+      "id": "step-condicoes-medicas-importantes",
+      "title": "Condições Médicas Importantes",
+      "renderType": "conditions",
+      "skippable": true,
+      "initiallyOpen": false
+    },
+    {
+      "id": "step-situacao-tarv",
+      "title": "Situação TARV",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "e0ad6284-a1d6-3fc0-9547-d3004821e956"
+    },
+    {
+      "id": "step-prescricao-de-medicamentos-arv",
+      "title": "Prescrição de Medicamentos-ARV",
+      "renderType": "medications",
+      "skippable": true,
+      "initiallyOpen": false
+    },
+    {
+      "id": "step-agendar-proxima-consulta",
+      "title": "Agendar Proxima Consulta",
+      "renderType": "appointments",
+      "skippable": true,
+      "initiallyOpen": false
+    },
+    {
+      "id": "step-dispensa-tpt",
+      "title": "Dispensa TPT",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "660e2632-5637-4455-82d6-1c59c7ae0237"
+    }
+  ]
+}
