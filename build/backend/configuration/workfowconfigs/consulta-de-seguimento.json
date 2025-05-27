@@ -1,0 +1,87 @@
+{
+  "name": "Consulta de Seguimento",
+  "criteria": [
+    {
+      "criteriaType": "PATIENT_DEMOGRAPHICS",
+      "condition": "age > 0"
+    }
+  ],
+  "description": "Flow para consulta de seguimento",
+  "published": true,
+  "version": "1.0",
+  "steps": [
+    {
+      "id": "step-avaliacao-de-adesao-e-efeitos-secundarios",
+      "title": "Avaliação de adesão e efeitos secundários",
+      "renderType": "form",
+      "formId": "1eb6fc3f-7311-3113-b783-149dfff04182",
+      "skippable": true,
+      "initiallyOpen": true
+    },
+    {
+      "id": "step-avaliacao-do-estado-nutricional",
+      "title": "Avaliação do Estado Nutricional",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "00dde54f-eaac-3d8e-9906-ba498b747521"
+    },
+    {
+      "id": "step-rastreio-e-diagnostico-tt-its",
+      "title": "Rastreio e Diagnostico TT ITS",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "6c9c370c-28f5-307c-b17a-3b1e303cb3c1"
+    },
+    {
+      "id": "step-rastreio-de-tb",
+      "title": "Rastreio de TB",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "bd2123f3-e588-3fd1-ba3b-79f2b20a2fc7"
+    },
+    {
+      "id": "step-infecoes-oportunistas-e-estadio-oms",
+      "title": "Infecções Oportunistas e Estadio OMS",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "cc49ad5f-5905-3484-a41e-90004aa3303b"
+    },
+    {
+      "id": "step-mds",
+      "title": "MDS",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "1bd9f3e0-6de5-399e-9100-7cddd7d9b1b4"
+    },
+    {
+      "id": "step-referencias",
+      "title": "Referências",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "d7827228-9197-332f-be84-63e14f297793"
+    },
+    {
+      "id": "step-prescricao-tarv",
+      "title": "Prescrição TARV",
+      "renderType": "regimen-drug-order",
+      "skippable": true,
+      "metadata": {
+        "regimen": "TARV",
+        "type": "PrescricaoNormal"
+      }
+    },
+    {
+      "id": "step-agendar-proxima-consulta",
+      "title": "Agendar Próxima Consulta",
+      "renderType": "appointments",
+      "skippable": true,
+      "initiallyOpen": false
+    }
+  ]
+}

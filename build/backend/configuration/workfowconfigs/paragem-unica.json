@@ -1,0 +1,24 @@
+{
+  "name": "Paragem Unica",
+  "syncPatient": false,
+    "criteria": [
+    {
+      "criteriaType": "PATIENT_DEMOGRAPHICS",
+      "condition": "age > 0"
+    }
+  ],
+  "description": "Flow para paragem unica",
+  "published": true,
+  "version": "1.0",
+  "steps": [
+    {
+      "id": "step-paragem-unica",
+      "title": "Paragem Única",
+      "renderType": "regimen-drug-order",
+      "metadata": {
+        "regimen": "TARV",
+        "type": "DispensaParagemUnica"
+      }
+    }
+  ]
+}

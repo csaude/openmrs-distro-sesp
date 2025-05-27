@@ -1,0 +1,93 @@
+{
+  "name": "Consulta Inicial",
+  "criteria": [
+    {
+      "criteriaType": "PATIENT_DEMOGRAPHICS",
+      "condition": "age > 0"
+    }
+  ],
+  "description": "Flow para consulta inicial",
+  "published": true,
+  "version": "1.0",
+  "steps": [
+    {
+      "id": "step-alergias-a-medicamentos",
+      "title": "Alergias a Medicamentos",
+      "renderType": "allergies",
+      "skippable": true,
+      "initiallyOpen": true
+    },
+    {
+      "id": "step-condicoes-medicas",
+      "title": "Condicoes Medicas",
+      "renderType": "conditions",
+      "skippable": true,
+      "initiallyOpen": false
+    },
+    {
+      "id": "step-situacao-tarv",
+      "title": "Situacao TARV",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "2a538405-418c-4396-b860-58abc081be07"
+    },
+    {
+      "id": "step-avaliacao-da-adesao-e-efeitos-secundarios",
+      "title": "Avaliação da Adesão & Efeitos Secundários",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "1eb6fc3f-7311-3113-b783-149dfff04182"
+    },
+    {
+      "id": "step-avaliacao-do-estado-nutricional",
+      "title": "Avaliação do Estado Nutricional",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "00dde54f-eaac-3d8e-9906-ba498b747521"
+    },
+    {
+      "id": "step-rastreio-diagnostico-e-tt-its",
+      "title": "Rastreio, Diagnóstico e TT ITS",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "6c9c370c-28f5-307c-b17a-3b1e303cb3c1"
+    },
+    {
+      "id": "step-infeccoes-oportunistas",
+      "title": "Infecções Oportunistas",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "cc49ad5f-5905-3484-a41e-90004aa3303b"
+    },
+    {
+      "id": "step-referencias",
+      "title": "Referências",
+      "renderType": "form",
+      "skippable": true,
+      "initiallyOpen": false,
+      "formId": "d7827228-9197-332f-be84-63e14f297793"
+    },
+    {
+      "id": "step-prescricao-tarv",
+      "title": "Prescrição TARV",
+      "renderType": "regimen-drug-order",
+      "skippable": true,
+      "metadata": {
+        "regimen": "TARV",
+        "type": "PrescricaoNormal"
+      }
+    },
+    {
+      "id": "step-agendar-proxima-consulta",
+      "title": "Agendar Proxima Consulta",
+      "renderType": "appointments",
+      "skippable": true,
+      "initiallyOpen": false
+    }
+  ]
+}
