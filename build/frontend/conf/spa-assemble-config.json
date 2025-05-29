@@ -30,7 +30,7 @@
     "@openmrs/esm-generic-patient-widgets-app": "next",
     "@csaude/esm-patient-medications-app": "next",
     "@openmrs/esm-implementer-tools-app": "next",
-    "@csaude/esm-form-engine-app": "next",
+    "@openmrs/esm-form-engine-app": "next",
     "@openmrs/esm-fast-data-entry-app": "next",
     "@openmrs/esm-patient-chart-app": "next",
     "@openmrs/esm-patient-vitals-app": "next",
